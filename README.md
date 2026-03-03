@@ -1,4 +1,4 @@
-# Short-Term Rental Investment Intelligence System – Portugal**
+# Short-Term Rental Investment Intelligence Project – Portugal**
 
 ----------------------------------------------------------------------------------------
 
