@@ -1,2 +1,189 @@
-# Portugal-Rental-Investment-
-End-to-end data analytics project evaluating short-term rental investment opportunities in Portugal. Includes custom data ingestion pipelines, regional market comparison (Lisbon coast, Porto, Douro), revenue estimation, mortgage simulation, and multi-property scalability modeling.
+# Short-Term Rental Investment Intelligence System – Portugal**
+
+----------------------------------------------------------------------------------------
+
+# 1. PROJECT OBJECTIVE
+
+The objective of this project is to design and build a data-driven investment intelligence system to evaluate the financial feasibility of short-term rental properties in Portugal.
+
+The system aims to answer the following core question:
+
+> Is purchasing and operating a short-term rental property in selected Portuguese regions a financially viable investment?
+
+The project will provide quantitative answers to:
+
+* Expected annual revenue per property
+* Estimated occupancy rates
+* Break-even occupancy levels
+* Monthly cash flow after expenses
+* Mortgage sustainability
+* Years required to fully repay a €150,000 investment
+* Scalability impact when increasing number of properties
+* Effect of multi-platform exposure on revenue potential
+
+This is not a descriptive analysis.
+It is a financial decision-support system.
+
+---
+
+# 2. GEOGRAPHIC SCOPE
+
+The analysis will focus on multiple Portuguese regions to allow cross-market comparison:
+
+### Lisbon Coastal Region
+
+* Costa da Caparica
+* Setúbal coastal municipalities
+
+### Porto & Northern Region
+
+* Porto metropolitan coastal zone
+* Douro Valley (wine tourism region)
+
+Future expansion:
+
+* Interior rural properties (e.g., cabanas and eco-lodges)
+
+The objective is to compare:
+
+* Coastal tourism markets
+* Urban-adjacent markets
+* Wine tourism markets
+* Rural tourism markets (future phase)
+
+---
+
+# 3. DATA ACQUISITION STRATEGY
+
+This project does not rely on static third-party analysis.
+
+Instead, it builds a structured data ingestion pipeline using:
+
+* Publicly available listing information
+* Programmatic dataset acquisition
+* Custom filtering and transformation
+* Cross-platform listing detection (Phase 2)
+
+Data collection will include:
+
+* Listing price
+* Availability metrics
+* Location coordinates
+* Room type and capacity
+* Review volume and rating
+* Platform presence
+
+The project architecture allows integration of multiple platforms including:
+
+* Airbnb
+* Booking.com
+* Vrbo
+* Other major rental marketplaces
+
+Primary unit of analysis:
+Each property is treated as a unique asset.
+
+---
+
+# 4. METHODOLOGY
+
+The system will operate through the following stages:
+
+### Stage 1 – Data Acquisition
+
+Programmatic download and ingestion of public listing data snapshots.
+
+### Stage 2 – Geographic Filtering
+
+Filtering listings based on precise geographic criteria (coordinates and municipalities).
+
+### Stage 3 – Revenue Estimation Model
+
+Occupancy will be estimated using availability metrics:
+
+Occupancy Rate = (365 − availability_365) / 365
+
+Estimated Annual Revenue = Occupancy × Nightly Price × 365
+
+Scenario modeling:
+
+* Conservative occupancy
+* Base scenario
+* Optimistic scenario
+
+### Stage 4 – Financial Modeling
+
+Mortgage simulation for a €150,000 property:
+
+* Down payment assumptions
+* Interest rate sensitivity
+* Loan term scenarios
+* Operational costs (utilities, taxes, maintenance, platform fees)
+
+Outputs:
+
+* Monthly cash flow
+* Net annual profit
+* Break-even occupancy
+* Payback period
+* Capital recovery timeline
+
+### Stage 5 – Multi-Property Scaling Model
+
+Simulation of portfolio growth:
+
+* Profit curve as number of properties increases
+* Operational scaling effects
+* Risk distribution analysis
+
+---
+
+# 5. SYSTEM ARCHITECTURE
+
+Tools:
+
+* Python (data acquisition and transformation)
+* Pandas & NumPy (data modeling)
+* SQL database (structured storage and ETL pipeline)
+* Tableau / Power BI (visualization and reporting)
+
+Pipeline design:
+
+Data Ingestion → Raw Storage → Data Cleaning → Aggregation → Financial Simulation → Dashboard Output
+
+The database will be structured around:
+
+* Property-level operational data
+* Platform exposure data
+* Financial assumptions
+* Profitability results
+
+---
+
+# 6. LONG-TERM EXTENSIONS
+
+Future project phases may include:
+
+* Cross-platform listing matching and exposure scoring
+* Revenue impact of multi-platform visibility
+* Comparison between coastal and rural investment models
+* Asset class comparison (apartments vs cabanas vs wine estates)
+* Risk-adjusted return modeling
+
+---
+
+# 7. EXPECTED OUTCOME
+
+The final system will provide a data-backed answer to:
+
+* Which Portuguese region offers the most sustainable short-term rental investment opportunity?
+* Can a €150,000 property become self-sustaining?
+* How long does it take to fully repay the bank?
+* Does scaling to multiple properties increase profitability linearly?
+* What occupancy rate is required to survive?
+
+The Project will support informed investment decisions rather than speculation.
+
+
+After alignment, we move back to data ingestion — but now with clarity.
+
