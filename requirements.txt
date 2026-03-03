@@ -1,0 +1,22 @@
+# Core data handling
+pandas==2.2.2
+numpy==1.26.4
+
+# HTTP requests
+requests==2.31.0
+
+# Date handling
+python-dateutil==2.8.2
+
+# Database (for later phase)
+sqlalchemy==2.0.29
+psycopg2-binary==2.9.9
+
+# Financial calculations
+numpy-financial==1.0.0
+
+# Environment management
+python-dotenv==1.0.1
+
+# Progress bars (useful when processing many properties)
+tqdm==4.66.4
