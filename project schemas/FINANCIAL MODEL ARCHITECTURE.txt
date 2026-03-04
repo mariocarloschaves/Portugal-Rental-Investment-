@@ -1,0 +1,87 @@
+FINANCIAL MODEL ARCHITECTURE
+Objective
+
+The financial model estimates the investment viability of short-term rental properties in Portugal.
+
+The model evaluates whether rental income can sustain mortgage payments and operational costs.
+
+1. Occupancy Estimation
+
+Occupancy is estimated using the availability data provided in the listing dataset.
+
+Formula:
+
+occupancy_rate = (365 - availability_365) / 365
+
+This represents the proportion of the year during which the property is likely occupied.
+
+2. Revenue Estimation
+
+Estimated annual revenue is calculated as:
+
+annual_revenue = nightly_price × occupancy_rate × 365
+
+This assumes the nightly price remains stable throughout the year.
+
+3. Mortgage Simulation
+
+The model simulates a mortgage scenario for a €150,000 property purchase.
+
+Example parameters:
+
+Down payment: 20%
+
+Interest rate: variable
+
+Loan term: 30 years
+
+The model calculates:
+
+Monthly mortgage payment
+
+Total annual mortgage cost
+
+4. Operational Expenses
+
+Estimated operational expenses include:
+
+Utilities
+
+Maintenance
+
+Platform service fees
+
+Insurance
+
+Local property taxes
+
+These expenses are deducted from annual revenue.
+
+5. Profitability Metrics
+
+The model produces several key investment indicators:
+
+Net annual profit
+
+Monthly cash flow
+
+Break-even occupancy rate
+
+Payback period
+
+Return on investment (ROI)
+
+6. Portfolio Scaling Simulation
+
+The model can simulate owning multiple rental properties.
+
+The system evaluates how profit changes as the number of properties increases.
+
+Example analysis:
+
+Properties	Annual Profit
+1	X
+2	Y
+3	Z
+
+This allows investors to evaluate portfolio expansion strategies.

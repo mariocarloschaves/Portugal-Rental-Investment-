@@ -1,0 +1,77 @@
+DATA SCHEMA
+Overview
+
+The database schema is designed to store operational rental data, platform exposure data, and financial modeling outputs.
+
+The system follows a property-centered architecture where each property is treated as a unique asset.
+
+1. Properties Table
+
+This table stores the fundamental information about each rental property.
+
+Fields:
+
+Field	Description
+property_id	Unique identifier
+listing_name	Property listing title
+region	Geographic region
+latitude	Geographic latitude
+longitude	Geographic longitude
+room_type	Property type
+accommodates	Maximum number of guests
+2. Listing Metrics Table
+
+This table contains operational metrics extracted from listing datasets.
+
+Fields:
+
+Field	Description
+property_id	Reference to properties table
+nightly_price	Listed price per night
+availability_365	Number of available days per year
+number_of_reviews	Total review count
+review_score	Average review rating
+3. Platform Presence Table
+
+This table records which platforms a property appears on.
+
+Fields:
+
+Field	Description
+property_id	Property identifier
+platform_name	Rental platform
+listing_url	URL of listing
+
+Example platforms:
+
+Airbnb
+
+Booking.com
+
+Vrbo
+
+4. Financial Assumptions Table
+
+This table stores parameters used in financial modeling.
+
+Fields:
+
+Field	Description
+property_id	Property identifier
+purchase_price	Property purchase value
+mortgage_rate	Interest rate
+loan_term_years	Mortgage duration
+monthly_expenses	Estimated operational costs
+5. Financial Results Table
+
+This table contains the output of investment simulations.
+
+Fields:
+
+Field	Description
+property_id	Property identifier
+estimated_revenue	Estimated annual revenue
+occupancy_rate	Estimated occupancy
+break_even_occupancy	Minimum required occupancy
+annual_profit	Net yearly profit
+payback_period	Years to recover investment

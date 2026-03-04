@@ -1,0 +1,130 @@
+PROJECT PIPELINE
+Overview
+
+This document describes the full data pipeline used in the Portugal Rental Investment project.
+
+The system follows a structured data engineering workflow composed of five main stages:
+
+Data Acquisition
+
+Data Processing
+
+Data Storage
+
+Financial Modeling
+
+Data Visualization
+
+Each stage is independent but connected through a defined pipeline.
+
+1. Data Acquisition
+
+Purpose:
+Collect property listing data from publicly available rental platforms.
+
+Primary source:
+
+Airbnb listing datasets (InsideAirbnb project)
+
+Future sources:
+
+Booking.com
+
+Vrbo
+
+Additional rental marketplaces
+
+The ingestion process performs:
+
+Dataset download
+
+Raw data storage
+
+Dataset inspection
+
+Raw datasets are stored in:
+
+data/raw/
+
+2. Data Processing
+
+Purpose:
+Transform raw listing data into a structured dataset containing only the regions relevant to the investment analysis.
+
+Processing tasks include:
+
+Geographic filtering
+
+Data cleaning
+
+Price normalization
+
+Availability interpretation
+
+Property identifier creation
+
+Processed datasets are stored in:
+
+data/processed/
+
+3. Data Storage
+
+Processed data will be organized and stored in a relational database.
+
+The database allows:
+
+Structured querying
+
+Aggregations
+
+Efficient data retrieval
+
+Integration with visualization tools
+
+The database will contain several logical groups of tables:
+
+Property information
+
+Platform presence
+
+Financial assumptions
+
+Profitability calculations
+
+4. Financial Modeling
+
+Once the dataset is prepared, the project performs financial modeling to estimate investment feasibility.
+
+Key calculations include:
+
+Estimated occupancy rate
+
+Estimated annual revenue
+
+Break-even occupancy
+
+Mortgage sustainability
+
+Investment payback period
+
+These calculations simulate the financial performance of a rental property with a purchase value of approximately €150,000.
+
+5. Data Visualization
+
+Final results will be presented through interactive dashboards.
+
+Visualization tools:
+
+Tableau
+
+Power BI
+
+Dashboards will allow users to explore:
+
+Regional rental market performance
+
+Property revenue potential
+
+Investment scenarios
+
+Portfolio scalability

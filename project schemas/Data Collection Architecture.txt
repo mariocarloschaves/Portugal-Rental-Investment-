@@ -1,0 +1,213 @@
+DATA COLLECTION ARCHITECTURE
+1. Overview
+
+The data collection phase aims to build a structured dataset of short-term rental properties in Portugal in order to evaluate the financial viability of rental property investments.
+
+The architecture follows a two-stage pipeline:
+
+Base dataset construction (Airbnb listings)
+
+Cross-platform verification (multi-platform presence)
+
+The objective is to build a property-level dataset that includes pricing, availability, location, and platform exposure.
+
+This dataset will later feed the financial modeling and investment analysis stages of the project.
+
+2. Stage 1 — Base Dataset (Airbnb Listings)
+Purpose
+
+The first stage creates the core dataset of rental properties.
+
+This dataset will provide the fundamental variables required to estimate revenue and occupancy.
+
+These include:
+
+Property location
+
+Nightly price
+
+Availability metrics
+
+Number of reviews
+
+Property type
+
+Guest capacity
+
+2.1 Data Source
+
+Primary data source:
+
+InsideAirbnb public dataset
+
+Example dataset structure:
+
+http://data.insideairbnb.com/portugal/lisbon/YYYY-MM-DD/data/listings.csv.gz
+
+The dataset contains a snapshot of publicly available Airbnb listings for the selected region.
+
+Each row represents a single property listing.
+
+2.2 Data Ingestion Process
+
+The ingestion pipeline performs the following steps:
+
+Download dataset from the InsideAirbnb server
+
+Store raw dataset locally
+
+Load dataset into the Python environment
+
+Inspect dataset structure (columns and metadata)
+
+Raw datasets are stored in the following directory:
+
+data/raw/
+
+Example:
+
+data/raw/lisbon_listings.csv.gz
+
+The raw dataset is never modified.
+All transformations occur on processed copies.
+
+2.3 Regional Filtering
+
+The project focuses on specific Portuguese regions where short-term rental investments are relevant.
+
+Target Regions
+
+Lisbon Coastal Area
+
+Costa da Caparica
+
+Setúbal coastal municipalities
+
+Northern Portugal
+
+Porto metropolitan area
+
+Douro Valley
+
+The objective is to compare different tourism markets, including:
+
+Region	Tourism Type
+Caparica	Coastal tourism
+Setúbal	Coastal tourism
+Porto	Urban tourism
+Douro	Wine tourism
+2.4 Geographic Filtering Method
+
+Regions will be defined using geographic bounding boxes based on latitude and longitude coordinates.
+
+Filtering will use the following dataset fields:
+
+latitude
+
+longitude
+
+Example filtering logic:
+
+lat_min <= latitude <= lat_max
+lon_min <= longitude <= lon_max
+
+This approach ensures precise geographic selection and avoids inconsistencies in neighborhood naming.
+
+2.5 Processed Dataset Output
+
+After filtering, the dataset will be stored in:
+
+data/processed/
+
+Examples:
+
+data/processed/lisbon_coastal_properties.csv
+data/processed/porto_properties.csv
+
+These processed datasets contain only the listings relevant to the investment analysis.
+
+3. Stage 2 — Cross-Platform Verification
+Purpose
+
+The second stage enriches the dataset by identifying properties that appear on multiple rental platforms.
+
+Multi-platform exposure can increase property visibility and potentially increase booking frequency.
+
+This stage allows the project to measure whether listings that appear on multiple platforms perform differently from single-platform listings.
+
+3.1 Major Platforms
+
+The following platforms will be considered:
+
+Airbnb
+
+Booking.com
+
+Vrbo
+
+Expedia / HomeToGo (optional future integration)
+
+3.2 Property Matching
+
+Properties will be matched across platforms using the following attributes:
+
+Listing title similarity
+
+Geographic coordinates
+
+Guest capacity
+
+Price range
+
+This process is commonly referred to as entity matching.
+
+Example:
+
+"Ocean View Apartment Caparica"
+
+Matching similar listings across platforms.
+
+3.3 Platform Presence Dataset
+
+A platform presence table will be created to record where each property is listed.
+
+Example structure:
+
+property_id	platform
+101	airbnb
+101	booking
+102	airbnb
+
+From this table, a platform exposure score can be calculated:
+
+platform_count = number of platforms where the property is listed
+4. Final Data Structure
+
+After completing both stages, the dataset will contain:
+
+property_id	region	price	availability	reviews	platform_count
+101	Caparica	110	120	45	2
+102	Setúbal	95	150	30	1
+103	Porto	140	90	80	3
+
+This dataset will serve as the input for the financial modeling and investment analysis phase.
+
+5. End of Data Collection Phase
+
+The data collection phase is considered complete when:
+
+Regional datasets are created
+
+Property-level information is extracted
+
+Cross-platform exposure data is integrated
+
+The next phase of the project will focus on:
+
+Revenue estimation
+
+Occupancy modeling
+
+Mortgage simulation
+
+Investment profitability analysis
