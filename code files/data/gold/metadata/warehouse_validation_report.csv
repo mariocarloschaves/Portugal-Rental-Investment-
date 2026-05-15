@@ -1,0 +1,6 @@
+validation_name,status,value
+duplicate_property_id_dim_property,pass,0
+duplicate_host_id_dim_host,pass,0
+null_property_key_fact_listing_snapshot,pass,0
+negative_price_fact_listing_snapshot,pass,0
+occupancy_rate_out_of_range,pass,0

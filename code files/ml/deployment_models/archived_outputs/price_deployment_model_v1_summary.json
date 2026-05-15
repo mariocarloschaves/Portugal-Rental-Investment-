@@ -1,0 +1,144 @@
+{
+  "created_at_utc": "2026-05-15T08:16:24.400326+00:00",
+  "script": "price_deployment_model_v1.py",
+  "preferred_candidate": false,
+  "chosen_blend_strategy": {
+    "strategy": "bucket_specific_weight",
+    "weight_scope": "predicted_price_bucket_from_baseline",
+    "global_fallback_weight": 0.74,
+    "r2": 0.6772980404315381,
+    "rmse": 40.61645260884759,
+    "mae": 28.11974883821263,
+    "mape": 0.20202732337008564,
+    "residual_mean": -0.5849935065545455,
+    "residual_std": 40.61223959749144
+  },
+  "overall_test_metrics": [
+    {
+      "model_variant": "baseline_single_hgb_log_observed_full",
+      "r2": 0.6953737445885337,
+      "rmse": 40.39753763012527,
+      "mae": 27.167903620872323,
+      "mape": 0.19070897056387545,
+      "residual_mean": -2.6070252832304104,
+      "residual_std": 40.3133286364446
+    },
+    {
+      "model_variant": "segmented_best_validation",
+      "r2": 0.6947739611958608,
+      "rmse": 40.43728774502475,
+      "mae": 27.471793921465032,
+      "mape": 0.20094823148089522,
+      "residual_mean": 1.7836499129947034,
+      "residual_std": 40.39793105051053
+    },
+    {
+      "model_variant": "blended_candidate",
+      "r2": 0.7003595344078803,
+      "rmse": 40.06558237044478,
+      "mae": 27.24505848754964,
+      "mape": 0.19754104368518136,
+      "residual_mean": 0.5941586066136005,
+      "residual_std": 40.06117654579159
+    }
+  ],
+  "validation_strategy_table": [
+    {
+      "strategy": "bucket_specific_weight",
+      "weight_scope": "predicted_price_bucket_from_baseline",
+      "global_weight": NaN,
+      "r2": 0.6772980404315381,
+      "rmse": 40.61645260884759,
+      "mae": 28.11974883821263,
+      "mape": 0.20202732337008564,
+      "residual_mean": -0.5849935065545455,
+      "residual_std": 40.61223959749144,
+      "weight_normal": NaN,
+      "weight_luxury": NaN,
+      "global_fallback_weight": 0.74
+    },
+    {
+      "strategy": "segment_specific_weight",
+      "weight_scope": "predicted_segment",
+      "global_weight": NaN,
+      "r2": 0.6772155052196002,
+      "rmse": 40.621646369071996,
+      "mae": 28.13008345885609,
+      "mape": 0.20178134578335982,
+      "residual_mean": -0.5530412305059262,
+      "residual_std": 40.61788151948968,
+      "weight_normal": 0.75,
+      "weight_luxury": 0.25,
+      "global_fallback_weight": NaN
+    },
+    {
+      "strategy": "global_weight",
+      "weight_scope": "global",
+      "global_weight": 0.74,
+      "r2": 0.6769267825236067,
+      "rmse": 40.63980983405991,
+      "mae": 28.10444781903484,
+      "mape": 0.20164227880484759,
+      "residual_mean": -0.5329209753555613,
+      "residual_std": 40.636315514359545,
+      "weight_normal": NaN,
+      "weight_luxury": NaN,
+      "global_fallback_weight": NaN
+    },
+    {
+      "strategy": "segmented_reference",
+      "weight_scope": "none",
+      "global_weight": NaN,
+      "r2": 0.6749320853064174,
+      "rmse": 40.76507458957014,
+      "mae": 28.282330682695676,
+      "mape": 0.204853153348175,
+      "residual_mean": 0.6796195098071739,
+      "residual_std": 40.759409019453486,
+      "weight_normal": NaN,
+      "weight_luxury": NaN,
+      "global_fallback_weight": NaN
+    },
+    {
+      "strategy": "baseline_reference",
+      "weight_scope": "none",
+      "global_weight": NaN,
+      "r2": 0.6614653458503806,
+      "rmse": 41.60090271179817,
+      "mae": 28.49160294454243,
+      "mape": 0.19851095565200777,
+      "residual_mean": -3.9839977408187313,
+      "residual_std": 41.409695343453656,
+      "weight_normal": NaN,
+      "weight_luxury": NaN,
+      "global_fallback_weight": NaN
+    }
+  ],
+  "leakage_checks": [
+    {
+      "check_name": "threshold_learned_only_from_training_data",
+      "value": true,
+      "detail": "Threshold quantile 0.975 was selected on validation and the final threshold value 345.0000 was computed from y_train_all only."
+    },
+    {
+      "check_name": "segmenter_fit_only_on_training_data",
+      "value": true,
+      "detail": "The luxury router classifier was fit on training rows only, then applied to validation/test rows."
+    },
+    {
+      "check_name": "blend_weight_tuned_only_on_validation_data",
+      "value": true,
+      "detail": "The chosen blend strategy bucket_specific_weight and its weights were tuned using validation predictions only."
+    },
+    {
+      "check_name": "test_set_used_only_for_final_evaluation",
+      "value": true,
+      "detail": "The test set was held out until the final baseline/segmented/blended comparison."
+    },
+    {
+      "check_name": "baseline_model_preserved_as_fallback",
+      "value": true,
+      "detail": "The current HGB log-price baseline is stored inside the blended bundle and remains the fallback model."
+    }
+  ]
+}

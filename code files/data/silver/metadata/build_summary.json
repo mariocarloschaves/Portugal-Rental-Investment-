@@ -1,0 +1,20 @@
+{
+  "pipeline_layer": "silver",
+  "dataset_name": "clean_master_listings",
+  "source_layer": "bronze",
+  "source_rows": 40255,
+  "silver_rows": 40255,
+  "column_count": 50,
+  "cities": {
+    "lisbon": 25449,
+    "porto": 14806
+  },
+  "output_files": {
+    "parquet": "C:\\Users\\mario\\Documents\\DSMLAISL LEARNING PATH\\Portugal-Rental-Investment-\\code files\\data\\silver\\listings\\clean_master_listings.parquet",
+    "csv": "C:\\Users\\mario\\Documents\\DSMLAISL LEARNING PATH\\Portugal-Rental-Investment-\\code files\\data\\silver\\listings\\clean_master_listings.csv",
+    "null_audit": "C:\\Users\\mario\\Documents\\DSMLAISL LEARNING PATH\\Portugal-Rental-Investment-\\code files\\data\\silver\\metadata\\null_audit.csv",
+    "column_profile": "C:\\Users\\mario\\Documents\\DSMLAISL LEARNING PATH\\Portugal-Rental-Investment-\\code files\\data\\silver\\metadata\\column_profile.csv",
+    "location_labels": "C:\\Users\\mario\\Documents\\DSMLAISL LEARNING PATH\\Portugal-Rental-Investment-\\code files\\data\\silver\\metadata\\location_labels.csv"
+  },
+  "parquet_status": "skipped: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.\n - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet."
+}

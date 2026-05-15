@@ -1,0 +1,5 @@
+scope,value,weight
+predicted_price_bucket_from_baseline,low_price,0.88
+predicted_price_bucket_from_baseline,medium_price,0.59
+predicted_price_bucket_from_baseline,high_price,0.78
+predicted_price_bucket_from_baseline,luxury_extreme_price,0.74

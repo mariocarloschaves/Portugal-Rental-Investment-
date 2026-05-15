@@ -1,0 +1,295 @@
+city,neighbourhood_cleansed,neighbourhood_group_cleansed,region_group,market_segment,coastal_flag,urban_flag
+lisbon,A dos Cunhados e Maceira,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Abrigada e Cabanas de Torres,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Agualva e Mira-Sintra,Sintra,lisbon_metro,urban_area,0,1
+lisbon,Ajuda,Lisboa,lisbon_core,city_area,0,1
+lisbon,Alcabideche,Cascais,lisbon_coastal,coast_beach,1,0
+lisbon,Alcntara,Lisboa,lisbon_core,city_area,0,1
+lisbon,Aldeia Galega da Merceana e Aldeia Gavinha,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Alenquer (Santo Estvo e Triana),Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Alfragide,Amadora,lisbon_metro,urban_area,0,1
+lisbon,"Algs, Linda-a-Velha e Cruz Quebrada-Dafundo",Oeiras,lisbon_coastal,coast_beach,1,0
+lisbon,Alguber,Cadaval,lisbon_inland,inland_town,0,0
+lisbon,Algueiro-Mem Martins,Sintra,lisbon_metro,urban_area,0,1
+lisbon,"Alhandra, So Joo dos Montes e Calhandriz",Vila Franca De Xira,lisbon_metro,urban_area,0,1
+lisbon,"Almargem do Bispo, Pro Pinheiro e Montelavar",Sintra,lisbon_metro,urban_area,0,1
+lisbon,Alvalade,Lisboa,lisbon_core,city_area,0,1
+lisbon,Alverca do Ribatejo e Sobralinho,Vila Franca De Xira,lisbon_metro,urban_area,0,1
+lisbon,Areeiro,Lisboa,lisbon_core,city_area,0,1
+lisbon,Arranh,Arruda Dos Vinhos,lisbon_inland,inland_town,0,0
+lisbon,Arroios,Lisboa,lisbon_core,city_area,0,1
+lisbon,Arruda dos Vinhos,Arruda Dos Vinhos,lisbon_inland,inland_town,0,0
+lisbon,Aveiras de Baixo,Azambuja,lisbon_inland,inland_town,0,0
+lisbon,Aveiras de Cima,Azambuja,lisbon_inland,inland_town,0,0
+lisbon,Avenidas Novas,Lisboa,lisbon_core,city_area,0,1
+lisbon,Azambuja,Azambuja,lisbon_inland,inland_town,0,0
+lisbon,Azueira e Sobral da Abelheira,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Barcarena,Oeiras,lisbon_coastal,coast_beach,1,0
+lisbon,Beato,Lisboa,lisbon_core,city_area,0,1
+lisbon,Belm,Lisboa,lisbon_core,city_area,0,1
+lisbon,Benfica,Lisboa,lisbon_core,city_area,0,1
+lisbon,Bucelas,Loures,lisbon_metro,urban_area,0,1
+lisbon,Cacm e So Marcos,Sintra,lisbon_metro,urban_area,0,1
+lisbon,Cadaval e Pro Moniz,Cadaval,lisbon_inland,inland_town,0,0
+lisbon,"Camarate, Unhos e Apelao",Loures,lisbon_metro,urban_area,0,1
+lisbon,Campelos e Outeiro da Cabea,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Campo de Ourique,Lisboa,lisbon_core,city_area,0,1
+lisbon,Campolide,Lisboa,lisbon_core,city_area,0,1
+lisbon,Carcavelos e Parede,Cascais,lisbon_coastal,coast_beach,1,0
+lisbon,Cardosas,Arruda Dos Vinhos,lisbon_inland,inland_town,0,0
+lisbon,Carnaxide e Queijas,Oeiras,lisbon_coastal,coast_beach,1,0
+lisbon,Carnide,Lisboa,lisbon_core,city_area,0,1
+lisbon,Carregado e Cadafais,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Carvoeira,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Carvoeira e Carmes,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Casal de Cambra,Sintra,lisbon_metro,urban_area,0,1
+lisbon,Cascais e Estoril,Cascais,lisbon_coastal,coast_beach,1,0
+lisbon,Colares,Sintra,lisbon_metro,urban_area,0,1
+lisbon,Dois Portos e Runa,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Encarnao,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Encosta do Sol,Amadora,lisbon_metro,urban_area,0,1
+lisbon,"Enxara do Bispo, Gradil e Vila Franca do Rosrio",Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Ericeira,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Estrela,Lisboa,lisbon_core,city_area,0,1
+lisbon,Falagueira-Venda Nova,Amadora,lisbon_metro,urban_area,0,1
+lisbon,Fanhes,Loures,lisbon_metro,urban_area,0,1
+lisbon,Freiria,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Igreja Nova e Cheleiros,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Lamas e Cercal,Cadaval,lisbon_inland,inland_town,0,0
+lisbon,Loures,Loures,lisbon_metro,urban_area,0,1
+lisbon,Lourinh e Atalaia,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,Lousa,Loures,lisbon_metro,urban_area,0,1
+lisbon,Lumiar,Lisboa,lisbon_core,city_area,0,1
+lisbon,Mafra,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Malveira e So Miguel de Alcaina,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,"Manique do Intendente, V.N.de S.Pedro e Maussa",Azambuja,lisbon_inland,inland_town,0,0
+lisbon,Marvila,Lisboa,lisbon_core,city_area,0,1
+lisbon,Massam e Monte Abrao,Sintra,lisbon_metro,urban_area,0,1
+lisbon,Maxial e Monte Redondo,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Meca,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Mina de gua,Amadora,lisbon_metro,urban_area,0,1
+lisbon,Miragaia e Marteleira,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,Misericrdia,Lisboa,lisbon_core,city_area,0,1
+lisbon,Moita dos Ferreiros,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,Moscavide e Portela,Loures,lisbon_metro,urban_area,0,1
+lisbon,Odivelas,Odivelas,lisbon_metro,urban_area,0,1
+lisbon,"Oeiras e S.Julio da Barra, Pao de Arcos e Caxias",Oeiras,lisbon_coastal,coast_beach,1,0
+lisbon,Olhalvo,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Olivais,Lisboa,lisbon_core,city_area,0,1
+lisbon,Ota,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Painho e Figueiros,Cadaval,lisbon_inland,inland_town,0,0
+lisbon,Parque das Naes,Lisboa,lisbon_core,city_area,0,1
+lisbon,Penha de Frana,Lisboa,lisbon_core,city_area,0,1
+lisbon,Peral,Cadaval,lisbon_inland,inland_town,0,0
+lisbon,Ponte do Rol,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Pontinha e Fames,Odivelas,lisbon_metro,urban_area,0,1
+lisbon,Porto Salvo,Oeiras,lisbon_coastal,coast_beach,1,0
+lisbon,Pvoa de Santa Iria e Forte da Casa,Vila Franca De Xira,lisbon_metro,urban_area,0,1
+lisbon,Pvoa de Santo Adrio e Olival de Basto,Odivelas,lisbon_metro,urban_area,0,1
+lisbon,Queluz e Belas,Sintra,lisbon_metro,urban_area,0,1
+lisbon,Ramada e Caneas,Odivelas,lisbon_metro,urban_area,0,1
+lisbon,Ramalhal,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Reguengo Grande,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,Ribafria e Pereiro de Palhacana,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Ribamar,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,Rio de Mouro,Sintra,lisbon_metro,urban_area,0,1
+lisbon,"S.Maria, S.Miguel, S.Martinho, S.Pedro Penaferrim",Sintra,lisbon_metro,urban_area,0,1
+lisbon,"S.Pedro e Santiago, S.Maria e S.Miguel, e Mataces",Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Sacavm e Prior Velho,Loures,lisbon_metro,urban_area,0,1
+lisbon,Santa Brbara,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,Santa Clara,Lisboa,lisbon_core,city_area,0,1
+lisbon,"Santa Iria de Azoia, So Joo da Talha e Bobadela",Loures,lisbon_metro,urban_area,0,1
+lisbon,Santa Maria Maior,Lisboa,lisbon_core,city_area,0,1
+lisbon,Santiago dos Velhos,Arruda Dos Vinhos,lisbon_inland,inland_town,0,0
+lisbon,Santo Antnio,Lisboa,lisbon_core,city_area,0,1
+lisbon,Santo Antnio dos Cavaleiros e Frielas,Loures,lisbon_metro,urban_area,0,1
+lisbon,Santo Anto e So Julio do Tojal,Loures,lisbon_metro,urban_area,0,1
+lisbon,Santo Isidoro,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Santo Quintino,Sobral De Monte Agrao,lisbon_inland,inland_town,0,0
+lisbon,Sapataria,Sobral De Monte Agrao,lisbon_inland,inland_town,0,0
+lisbon,Silveira,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,So Bartolomeu dos Galegos e Moledo,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,So Domingos de Benfica,Lisboa,lisbon_core,city_area,0,1
+lisbon,So Domingos de Rana,Cascais,lisbon_coastal,coast_beach,1,0
+lisbon,So Joo das Lampas e Terrugem,Sintra,lisbon_metro,urban_area,0,1
+lisbon,So Pedro da Cadeira,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,So Vicente,Lisboa,lisbon_core,city_area,0,1
+lisbon,Sobral de Monte Agrao,Sobral De Monte Agrao,lisbon_inland,inland_town,0,0
+lisbon,Turcifal,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Vale do Paraso,Azambuja,lisbon_inland,inland_town,0,0
+lisbon,Venda do Pinheiro e Santo Estvo das Gals,Mafra,lisbon_coastal,coast_beach,1,0
+lisbon,Venteira,Amadora,lisbon_metro,urban_area,0,1
+lisbon,Ventosa,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Ventosa,Torres Vedras,lisbon_coastal,coast_beach,1,0
+lisbon,Vermelha,Cadaval,lisbon_inland,inland_town,0,0
+lisbon,Vialonga,Vila Franca De Xira,lisbon_metro,urban_area,0,1
+lisbon,Vila Franca de Xira,Vila Franca De Xira,lisbon_metro,urban_area,0,1
+lisbon,Vila Nova da Rainha,Azambuja,lisbon_inland,inland_town,0,0
+lisbon,Vila Verde dos Francos,Alenquer,lisbon_inland,inland_town,0,0
+lisbon,Vilar,Cadaval,lisbon_inland,inland_town,0,0
+lisbon,Vimeiro,Lourinh,lisbon_coastal,coast_beach,1,0
+lisbon,guas Livres,Amadora,lisbon_metro,urban_area,0,1
+porto,"AVer-o-Mar, Amorim e Terroso",PÓVOA DE VARZIM,porto_coastal,coast_beach,1,0
+porto,Agrela,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Aguiar de Sousa,PAREDES,porto_inland,inland_town,0,0
+porto,Aguçadoura e Navais,PÓVOA DE VARZIM,porto_coastal,coast_beach,1,0
+porto,"Aldoar, Foz do Douro e Nevogilde",PORTO,porto_core,city_area,0,1
+porto,Alfena,VALONGO,porto_metro,urban_area,0,1
+porto,Alvarelhos e Guidões,TROFA,porto_inland,inland_town,0,0
+porto,Alvarenga,AROUCA,porto_inland,inland_town,0,0
+porto,Anta e Guetim,ESPINHO,porto_coastal,coast_beach,1,0
+porto,Arcozelo,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,"Areias, Sequeiró, Lama e Palmeira",SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Argoncilhe,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Arouca e Burgo,AROUCA,porto_inland,inland_town,0,0
+porto,Arrifana,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Arões,VALE DE CAMBRA,porto_inland,inland_town,0,0
+porto,Aveleda,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Aves,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Avintes,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Azurara,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Baguim do Monte (Rio Tinto),GONDOMAR,porto_metro,urban_area,0,1
+porto,"Bagunte, Ferreiró, Outeiro Maior e Parada",VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Balazar,PÓVOA DE VARZIM,porto_coastal,coast_beach,1,0
+porto,Baltar,PAREDES,porto_inland,inland_town,0,0
+porto,Bonfim,PORTO,porto_core,city_area,0,1
+porto,Bougado (São Martinho e Santiago),TROFA,porto_inland,inland_town,0,0
+porto,Cabreiros e Albergaria da Serra,AROUCA,porto_inland,inland_town,0,0
+porto,Caldas de São Jorge e de Pigeiros,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Campanhã,PORTO,porto_core,city_area,0,1
+porto,Campo e Sobrado,VALONGO,porto_metro,urban_area,0,1
+porto,"Canedo, Vale e Vila Maior",SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Canelas,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Canelas e Espiunca,AROUCA,porto_inland,inland_town,0,0
+porto,Canidelo,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Carregosa,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Carreira e Refojos de Riba de Ave,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Castêlo da Maia,MAIA,porto_metro,urban_area,0,1
+porto,"Cedofeita, Ildefonso, Sé, Miragaia, Nicolau, Vitória",PORTO,porto_core,city_area,0,1
+porto,Cepelos,VALE DE CAMBRA,porto_inland,inland_town,0,0
+porto,Cesar,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Cete,PAREDES,porto_inland,inland_town,0,0
+porto,Chave,AROUCA,porto_inland,inland_town,0,0
+porto,Cidade da Maia,MAIA,porto_metro,urban_area,0,1
+porto,Coronado (São Romão e São Mamede),TROFA,porto_inland,inland_town,0,0
+porto,Covelas,TROFA,porto_inland,inland_town,0,0
+porto,Covelo de Paivó e Janarde,AROUCA,porto_inland,inland_town,0,0
+porto,Cristelo,PAREDES,porto_inland,inland_town,0,0
+porto,"Custóias, Leça do Balio e Guifões",MATOSINHOS,porto_coastal,coast_beach,1,0
+porto,Ermesinde,VALONGO,porto_metro,urban_area,0,1
+porto,Escapães,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Escariz,AROUCA,porto_inland,inland_town,0,0
+porto,Espinho,ESPINHO,porto_coastal,coast_beach,1,0
+porto,Estela,PÓVOA DE VARZIM,porto_coastal,coast_beach,1,0
+porto,Fajões,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Fermedo,AROUCA,porto_inland,inland_town,0,0
+porto,Fiães,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Folgosa,MAIA,porto_metro,urban_area,0,1
+porto,Fornelo e Vairão,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Fornos,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Foz do Sousa e Covelo,GONDOMAR,porto_metro,urban_area,0,1
+porto,Fânzeres e São Pedro da Cova,GONDOMAR,porto_metro,urban_area,0,1
+porto,Gandra,PAREDES,porto_inland,inland_town,0,0
+porto,Gião,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,"Gondomar (São Cosme), Valbom e Jovim",GONDOMAR,porto_metro,urban_area,0,1
+porto,Grijó e Sermonde,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Guilhabreu,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Gulpilhares e Valadares,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Junqueira,VALE DE CAMBRA,porto_inland,inland_town,0,0
+porto,Junqueira,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Labruge,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Laundos,PÓVOA DE VARZIM,porto_coastal,coast_beach,1,0
+porto,"Lobão, Gião, Louredo e Guisande",SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Lomba,GONDOMAR,porto_metro,urban_area,0,1
+porto,Lordelo,PAREDES,porto_inland,inland_town,0,0
+porto,Lordelo do Ouro e Massarelos,PORTO,porto_core,city_area,0,1
+porto,Louredo,PAREDES,porto_inland,inland_town,0,0
+porto,Loureiro,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Lourosa,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Macieira da Maia,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Macieira de Cambra,VALE DE CAMBRA,porto_inland,inland_town,0,0
+porto,Macieira de Sarnes,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Madalena,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Mafamude e Vilar do Paraíso,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Malta e Canidelo,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Mansores,AROUCA,porto_inland,inland_town,0,0
+porto,Matosinhos e Leça da Palmeira,MATOSINHOS,porto_coastal,coast_beach,1,0
+porto,Melres e Medas,GONDOMAR,porto_metro,urban_area,0,1
+porto,Milheirós,MAIA,porto_metro,urban_area,0,1
+porto,Milheirós de Poiares,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Mindelo,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Moldes,AROUCA,porto_inland,inland_town,0,0
+porto,Monte Córdova,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Moreira,MAIA,porto_metro,urban_area,0,1
+porto,Mozelos,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Muro,TROFA,porto_inland,inland_town,0,0
+porto,Negrelos (São Tomé),SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Nogueira da Regedoura,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Nogueira do Cravo e Pindelo,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Nogueira e Silva Escura,MAIA,porto_metro,urban_area,0,1
+porto,"O. Azeméis, Riba-Ul, Ul, Macinhata da Seixa, Madail",OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Oliveira do Douro,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Ossela,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Parada de Todeia,PAREDES,porto_inland,inland_town,0,0
+porto,Paramos,ESPINHO,porto_coastal,coast_beach,1,0
+porto,Paranhos,PORTO,porto_core,city_area,0,1
+porto,Paredes,PAREDES,porto_inland,inland_town,0,0
+porto,Paços de Brandão,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Pedroso e Seixezelo,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Pedrouços,MAIA,porto_metro,urban_area,0,1
+porto,"Perafita, Lavra e Santa Cruz do Bispo",MATOSINHOS,porto_coastal,coast_beach,1,0
+porto,"Pinheiro da Bemposta, Travanca e Palmaz",OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,"Póvoa de Varzim, Beiriz e Argivai",PÓVOA DE VARZIM,porto_coastal,coast_beach,1,0
+porto,Ramalde,PORTO,porto_core,city_area,0,1
+porto,Rates,PÓVOA DE VARZIM,porto_coastal,coast_beach,1,0
+porto,Rebordosa,PAREDES,porto_inland,inland_town,0,0
+porto,Recarei,PAREDES,porto_inland,inland_town,0,0
+porto,Reguenga,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Retorta e Tougues,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Rio Mau e Arcos,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Rio Meão,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Rio Tinto,GONDOMAR,porto_metro,urban_area,0,1
+porto,Roge,VALE DE CAMBRA,porto_inland,inland_town,0,0
+porto,Romariz,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Roriz,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Rossas,AROUCA,porto_inland,inland_town,0,0
+porto,"Sandim, Olival, Lever e Crestuma",VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Sanguedo,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Santa Eulália,AROUCA,porto_inland,inland_town,0,0
+porto,"Santa Maria da Feira, Travanca, Sanfins e Espargo",SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Santa Maria de Lamas,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,Santa Marinha e São Pedro da Afurada,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Serzedo e Perosinho,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Silvalde,ESPINHO,porto_coastal,coast_beach,1,0
+porto,Sobreira,PAREDES,porto_inland,inland_town,0,0
+porto,Sobrosa,PAREDES,porto_inland,inland_town,0,0
+porto,"St. Tirso, Couto (S. Cristina e S. Miguel) e Burgães",SANTO TIRSO,porto_inland,inland_town,0,0
+porto,São Félix da Marinha,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,São João da Madeira,SÃO JOÃO DA MADEIRA,porto_inland,inland_town,0,0
+porto,São João de Ver,SANTA MARIA DA FEIRA,porto_inland,inland_town,0,0
+porto,São Mamede de Infesta e Senhora da Hora,MATOSINHOS,porto_coastal,coast_beach,1,0
+porto,São Martinho da Gândara,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,São Miguel do Mato,AROUCA,porto_inland,inland_town,0,0
+porto,São Pedro Fins,MAIA,porto_metro,urban_area,0,1
+porto,São Pedro de Castelões,VALE DE CAMBRA,porto_inland,inland_town,0,0
+porto,São Roque,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Touguinha e Touguinhó,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Tropeço,AROUCA,porto_inland,inland_town,0,0
+porto,Urrô,AROUCA,porto_inland,inland_town,0,0
+porto,Valongo,VALONGO,porto_metro,urban_area,0,1
+porto,Vandoma,PAREDES,porto_inland,inland_town,0,0
+porto,Vila Chã,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,"Vila Chã, Codal e Vila Cova de Perrinho",VALE DE CAMBRA,porto_inland,inland_town,0,0
+porto,Vila Nova da Telha,MAIA,porto_metro,urban_area,0,1
+porto,Vila Nova do Campo,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Vila de Cucujães,OLIVEIRA DE AZEMÉIS,porto_inland,inland_town,0,0
+porto,Vila do Conde,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Vilar de Andorinho,VILA NOVA DE GAIA,porto_coastal,coast_beach,1,0
+porto,Vilar de Pinheiro,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Vilar e Mosteiró,VILA DO CONDE,porto_coastal,coast_beach,1,0
+porto,Vilarinho,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Vilela,PAREDES,porto_inland,inland_town,0,0
+porto,Várzea,AROUCA,porto_inland,inland_town,0,0
+porto,Água Longa,SANTO TIRSO,porto_inland,inland_town,0,0
+porto,Águas Santas,MAIA,porto_metro,urban_area,0,1
+porto,Árvore,VILA DO CONDE,porto_coastal,coast_beach,1,0

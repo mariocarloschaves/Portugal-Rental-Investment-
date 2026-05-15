@@ -1,0 +1,4 @@
+model_variant,residual_mean,residual_std
+baseline_single_hgb_log_observed_full,-2.6070252832304104,40.3133286364446
+segmented_best_validation,1.7836499129947034,40.39793105051053
+blended_candidate,0.5941586066136005,40.06117654579159

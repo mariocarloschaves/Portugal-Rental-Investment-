@@ -1,0 +1,73 @@
+{
+  "script": "price_blended_candidate_v1.py",
+  "preferred_candidate": true,
+  "chosen_blend_strategy": {
+    "strategy": "bucket_specific_weight",
+    "weight_scope": "predicted_price_bucket_from_baseline",
+    "global_fallback_weight": 0.7,
+    "r2": 0.6698578780180081,
+    "rmse": 40.4879932119757,
+    "mae": 27.779115942167657,
+    "mape": 0.19533857407555522,
+    "residual_mean": -0.9633496653608962,
+    "residual_std": 40.476530875993305
+  },
+  "baseline_model_label": "baseline_single_hgb_log_observed_full",
+  "segmented_model_label": "segmented_best_validation",
+  "overall_test_metrics": [
+    {
+      "model_variant": "baseline_single_hgb_log_observed_full",
+      "r2": 0.6926914427126932,
+      "rmse": 40.082326204216066,
+      "mae": 27.127756678672096,
+      "mape": 0.18751499506425323,
+      "residual_mean": -3.7108058836893574,
+      "residual_std": 39.910184084200395
+    },
+    {
+      "model_variant": "segmented_best_validation",
+      "r2": 0.6980104074271807,
+      "rmse": 39.73393521798586,
+      "mae": 27.183163029174555,
+      "mape": 0.19378162952101463,
+      "residual_mean": 1.0004111311164732,
+      "residual_std": 39.721339170222286
+    },
+    {
+      "model_variant": "blended_candidate",
+      "r2": 0.7020679640060863,
+      "rmse": 39.46609832310355,
+      "mae": 26.875403452711776,
+      "mape": 0.19044850805181726,
+      "residual_mean": -0.28735517369001606,
+      "residual_std": 39.465052183584284
+    }
+  ],
+  "leakage_checks": [
+    {
+      "check_name": "threshold_learned_only_from_training_data",
+      "value": true,
+      "detail": "Threshold quantile 0.925 was selected on validation and the final threshold value 266.7750 was computed from y_train_all only."
+    },
+    {
+      "check_name": "segmenter_fit_only_on_training_data",
+      "value": true,
+      "detail": "The luxury router classifier was fit on training rows only, then applied to validation/test rows."
+    },
+    {
+      "check_name": "blend_weight_tuned_only_on_validation_data",
+      "value": true,
+      "detail": "The chosen blend strategy bucket_specific_weight and its weights were tuned using validation predictions only."
+    },
+    {
+      "check_name": "test_set_used_only_for_final_evaluation",
+      "value": true,
+      "detail": "The test set was held out until the final baseline/segmented/blended comparison."
+    },
+    {
+      "check_name": "baseline_model_preserved_as_fallback",
+      "value": true,
+      "detail": "The current HGB log-price baseline is stored inside the blended bundle and remains the fallback model."
+    }
+  ]
+}

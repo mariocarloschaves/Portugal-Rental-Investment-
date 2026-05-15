@@ -1,0 +1,335 @@
+{
+  "bundle_type": "price_gap_occupancy_deployment_model",
+  "created_at_utc": "2026-05-15T08:43:35.752169+00:00",
+  "selected_model": "E_xgb_hgb_blend_plus_price_gap",
+  "target_column": "target_occupancy_rate",
+  "feature_columns": [
+    "city",
+    "region_group",
+    "market_segment",
+    "market_type",
+    "neighbourhood_cleansed",
+    "neighbourhood_group_cleansed",
+    "property_type",
+    "room_type",
+    "accommodates",
+    "bedrooms",
+    "beds",
+    "bathrooms",
+    "price",
+    "price_per_guest",
+    "price_per_bedroom",
+    "price_per_bed",
+    "minimum_nights",
+    "maximum_nights",
+    "instant_bookable",
+    "host_is_superhost",
+    "platform_count",
+    "number_of_reviews",
+    "reviews_per_month",
+    "review_scores_rating",
+    "review_scores_cleanliness",
+    "review_scores_location",
+    "review_scores_value",
+    "host_response_rate",
+    "host_acceptance_rate",
+    "host_listings_count",
+    "host_total_listings_count",
+    "host_tenure_days",
+    "host_tenure_years",
+    "review_score_blend",
+    "amenity_count",
+    "booking_flex_window",
+    "beds_per_guest",
+    "bathrooms_per_guest",
+    "bedrooms_per_guest",
+    "log_price",
+    "financing_vintage_year",
+    "applied_asset_discount_pct",
+    "applied_annual_interest_rate",
+    "availability_30",
+    "availability_60",
+    "availability_90",
+    "availability_365",
+    "predicted_fair_price",
+    "price_gap_abs",
+    "price_gap_pct",
+    "overpriced_flag",
+    "underpriced_flag"
+  ],
+  "price_gap_features": [
+    "predicted_fair_price",
+    "price_gap_abs",
+    "price_gap_pct",
+    "overpriced_flag",
+    "underpriced_flag"
+  ],
+  "fair_price_model_stem": "nightly_price_deployment_model_v1",
+  "test_reference_metrics": [
+    {
+      "model_variant": "E_xgb_hgb_blend_plus_price_gap",
+      "r2": 0.7354114050569655,
+      "rmse": 0.0839174538348435,
+      "mae": 0.059228511604062214
+    },
+    {
+      "model_variant": "F_xgb_logit_plus_price_gap",
+      "r2": 0.7352552984293099,
+      "rmse": 0.08394220573134864,
+      "mae": 0.05892594163315463
+    },
+    {
+      "model_variant": "D_hgb_plus_price_gap",
+      "r2": 0.7331106284323524,
+      "rmse": 0.08428152357336825,
+      "mae": 0.05927913195991458
+    },
+    {
+      "model_variant": "B_current_best_xgb_plus_price_gap",
+      "r2": 0.7314359385932097,
+      "rmse": 0.08454553687192222,
+      "mae": 0.05992061242769383
+    },
+    {
+      "model_variant": "C_xgboost_plus_price_gap",
+      "r2": 0.7314359385932097,
+      "rmse": 0.08454553687192222,
+      "mae": 0.05992061242769383
+    },
+    {
+      "model_variant": "A_current_best_xgb",
+      "r2": 0.7299487707173666,
+      "rmse": 0.08477929827798333,
+      "mae": 0.06014109985003558
+    }
+  ],
+  "bucket_metrics": [
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "A_current_best_xgb",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0802753842765163,
+      "rmse": 0.10320566819812668,
+      "mae": 0.07721430946579898
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "B_current_best_xgb_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.088063331863522,
+      "rmse": 0.10339867376944008,
+      "mae": 0.07705968759436832
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "C_xgboost_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.088063331863522,
+      "rmse": 0.10339867376944008,
+      "mae": 0.07705968759436832
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "D_hgb_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0655815965361044,
+      "rmse": 0.10284053155139125,
+      "mae": 0.07628802051219703
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "E_xgb_hgb_blend_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0595889140902894,
+      "rmse": 0.10269124229173235,
+      "mae": 0.07631567369097794
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "F_xgb_logit_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0189228896054487,
+      "rmse": 0.10167238257796263,
+      "mae": 0.07491003242530704
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "A_current_best_xgb",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.360820991865245,
+      "rmse": 0.07604559373222917,
+      "mae": 0.05038755221684486
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "B_current_best_xgb_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.179675499537714,
+      "rmse": 0.07474973864782045,
+      "mae": 0.049558178892190954
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "C_xgboost_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.179675499537714,
+      "rmse": 0.07474973864782045,
+      "mae": 0.049558178892190954
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "D_hgb_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.230441340015773,
+      "rmse": 0.07511515541762918,
+      "mae": 0.04945042171728527
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "E_xgb_hgb_blend_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.127154932535219,
+      "rmse": 0.07436980159066357,
+      "mae": 0.04909761677819665
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "F_xgb_logit_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.101784084488387,
+      "rmse": 0.07418557028589431,
+      "mae": 0.048721632394572036
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "A_current_best_xgb",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.950660826500719,
+      "rmse": 0.07860736786757798,
+      "mae": 0.06091354272218092
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "B_current_best_xgb_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -2.040475116798535,
+      "rmse": 0.07979475316677022,
+      "mae": 0.061855110202273404
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "C_xgboost_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -2.040475116798535,
+      "rmse": 0.07979475316677022,
+      "mae": 0.061855110202273404
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "D_hgb_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.9604650632803353,
+      "rmse": 0.07873785492792346,
+      "mae": 0.060275724085481396
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "E_xgb_hgb_blend_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.9635942346367314,
+      "rmse": 0.07877945635932462,
+      "mae": 0.06075104519948165
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "F_xgb_logit_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -2.1090812781104185,
+      "rmse": 0.08068998722041754,
+      "mae": 0.06182611183529322
+    }
+  ],
+  "price_gap_feature_importance": [
+    {
+      "feature": "predicted_fair_price",
+      "mean_rmse_increase_when_shuffled": 0.0002862497968334654,
+      "mean_mae_increase_when_shuffled": 0.00045054861684059173,
+      "mean_r2_drop_when_shuffled": 0.0018088138974317936
+    },
+    {
+      "feature": "price_gap_abs",
+      "mean_rmse_increase_when_shuffled": 3.911349845301948e-05,
+      "mean_mae_increase_when_shuffled": 0.000202812953298169,
+      "mean_r2_drop_when_shuffled": 0.0002467855671879571
+    },
+    {
+      "feature": "price_gap_pct",
+      "mean_rmse_increase_when_shuffled": 1.3416850227848665e-06,
+      "mean_mae_increase_when_shuffled": 0.00011981397575582392,
+      "mean_r2_drop_when_shuffled": 8.545859541020384e-06
+    },
+    {
+      "feature": "overpriced_flag",
+      "mean_rmse_increase_when_shuffled": -1.0854522551617674e-07,
+      "mean_mae_increase_when_shuffled": 1.8816614436936718e-06,
+      "mean_r2_drop_when_shuffled": -6.842720919442158e-07
+    },
+    {
+      "feature": "underpriced_flag",
+      "mean_rmse_increase_when_shuffled": -7.143509350782118e-06,
+      "mean_mae_increase_when_shuffled": -5.398713598128713e-06,
+      "mean_r2_drop_when_shuffled": -4.504406606351541e-05
+    }
+  ],
+  "leakage_checks": [
+    {
+      "check_name": "outer_test_set_held_out",
+      "value": true,
+      "detail": "The occupancy test split is created once and used only for final evaluation."
+    },
+    {
+      "check_name": "fair_price_train_rows_are_oof",
+      "value": true,
+      "detail": "Training price-gap features use 3-fold out-of-fold blended price predictions."
+    },
+    {
+      "check_name": "fair_price_test_rows_use_train_only_price_model",
+      "value": true,
+      "detail": "Test price-gap features are generated by price models fit only on occupancy training rows."
+    },
+    {
+      "check_name": "blend_weight_tuned_on_validation_only",
+      "value": true,
+      "detail": "The XGB/HGB occupancy blend weight is tuned on a validation split from training data only."
+    },
+    {
+      "check_name": "saved_full_price_model_not_used_for_feature_creation",
+      "value": true,
+      "detail": "The saved full-data price model is not used to create the experimental gap features."
+    }
+  ],
+  "decision": {
+    "use_new_model": true,
+    "selected_model": "E_xgb_hgb_blend_plus_price_gap",
+    "current_model": "A_current_best_xgb",
+    "reason": "E_xgb_hgb_blend_plus_price_gap improves R2 and does not worsen RMSE/MAE."
+  }
+}

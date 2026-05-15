@@ -1,0 +1,27 @@
+[
+  {
+    "validation_name":"duplicate_property_id_dim_property",
+    "status":"pass",
+    "value":0
+  },
+  {
+    "validation_name":"duplicate_host_id_dim_host",
+    "status":"pass",
+    "value":0
+  },
+  {
+    "validation_name":"null_property_key_fact_listing_snapshot",
+    "status":"pass",
+    "value":0
+  },
+  {
+    "validation_name":"negative_price_fact_listing_snapshot",
+    "status":"pass",
+    "value":0
+  },
+  {
+    "validation_name":"occupancy_rate_out_of_range",
+    "status":"pass",
+    "value":0
+  }
+]

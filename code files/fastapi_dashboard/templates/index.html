@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portugal Rental Forecast</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Portugal Rental Investment Lab</p>
+        <h1>First-year rental forecast dashboard</h1>
+        <p class="hero-copy">
+          Answer a few practical questions about the property. The app estimates price, occupancy,
+          first-year revenue, costs, tax, and what could be left after everything is paid.
+        </p>
+      </div>
+      <div class="hero-badge">
+        <span>Forecast stack</span>
+        <strong>Price V2 + Occupancy V3 + Financial Simulator</strong>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <form id="forecast-form" class="panel form-panel">
+        <div class="panel-header">
+          <span class="panel-kicker">Inputs</span>
+          <h2>Property setup</h2>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            City
+            <select id="city-select" name="city" required></select>
+          </label>
+          <label>
+            Region
+            <select id="region-select" name="region_group" required></select>
+          </label>
+          <label>
+            Neighbourhood
+            <select id="neighbourhood-select" name="neighbourhood_cleansed" required></select>
+          </label>
+          <label>
+            Market type
+            <select id="market-type-select" name="market_type" required></select>
+          </label>
+          <label>
+            Property type
+            <select id="property-type-select" name="property_type" required></select>
+          </label>
+          <label>
+            Room type
+            <select id="room-type-select" name="room_type" required></select>
+          </label>
+        </div>
+
+        <div class="form-grid compact">
+          <label>
+            Guests
+            <input name="accommodates" type="number" min="1" max="20" step="1" value="2" required>
+          </label>
+          <label>
+            Bedrooms
+            <input name="bedrooms" type="number" min="0" max="20" step="0.5" value="1" required>
+          </label>
+          <label>
+            Beds
+            <input name="beds" type="number" min="0" max="30" step="0.5" value="1" required>
+          </label>
+          <label>
+            Bathrooms
+            <input name="bathrooms" type="number" min="0.5" max="20" step="0.5" value="1" required>
+          </label>
+          <label>
+            Minimum nights
+            <input name="minimum_nights" type="number" min="1" max="365" step="1" value="2" required>
+          </label>
+          <label>
+            Maximum nights
+            <input name="maximum_nights" type="number" min="1" max="1125" step="1" value="365" required>
+          </label>
+        </div>
+
+        <div class="amenity-grid">
+          <label><input name="instant_bookable" type="checkbox" checked> Instant bookable</label>
+          <label><input name="has_wifi" type="checkbox" checked> Wi-Fi</label>
+          <label><input name="has_aircon" type="checkbox"> Air conditioning</label>
+          <label><input name="has_pool" type="checkbox"> Pool</label>
+          <label><input name="has_parking" type="checkbox"> Parking</label>
+          <label><input name="has_washer" type="checkbox" checked> Washer</label>
+          <label><input name="has_dryer" type="checkbox"> Dryer</label>
+          <label><input name="has_kitchen" type="checkbox" checked> Kitchen</label>
+          <label><input name="has_tv" type="checkbox" checked> TV</label>
+          <label><input name="has_heating" type="checkbox" checked> Heating</label>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Property acquisition cost
+            <input name="property_acquisition_cost" type="number" min="1" max="5000000" step="1" value="120000" required>
+          </label>
+          <label>
+            Furnishing setup cost
+            <input name="furnishing_setup_cost" type="number" min="0" max="500000" step="1" value="12000" required>
+          </label>
+          <label>
+            Financing scenario
+            <select id="financing-select" name="financing_scenario" required></select>
+          </label>
+        </div>
+
+        <div id="error-box" class="error-box" hidden></div>
+        <button id="submit-button" class="primary-button" type="submit">Generate forecast</button>
+      </form>
+
+      <section class="panel results-panel">
+        <div class="panel-header">
+          <span class="panel-kicker">Forecast</span>
+          <h2 id="result-title">Ready when you are</h2>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <p>Submit the form to see the first-year forecast dashboard.</p>
+        </div>
+
+        <div id="dashboard" class="dashboard-stack" hidden>
+          <div class="headline-card">
+            <span>Quick take</span>
+            <strong id="diagnosis-headline"></strong>
+            <p id="diagnosis-note"></p>
+          </div>
+
+          <div id="warning-box" class="warning-box" hidden></div>
+
+          <div class="metric-grid">
+            <article class="metric-card accent">
+              <span>Nightly price</span>
+              <strong id="nightly-price">-</strong>
+              <small>Best price estimate from the current model stack</small>
+            </article>
+            <article class="metric-card">
+              <span>Occupancy</span>
+              <strong id="occupancy-rate">-</strong>
+              <small id="occupied-nights">-</small>
+            </article>
+            <article class="metric-card">
+              <span>Monthly net after tax</span>
+              <strong id="monthly-net">-</strong>
+              <small>What could be left after costs, bank payment, and tax</small>
+            </article>
+            <article class="metric-card">
+              <span>Annual net after tax</span>
+              <strong id="annual-net">-</strong>
+              <small id="review-forecast">First-year estimate</small>
+            </article>
+          </div>
+
+          <div class="split">
+            <div class="mini-panel">
+              <h3>Monthly stack</h3>
+              <div class="stack-row"><span>Gross revenue</span><strong id="monthly-gross">-</strong></div>
+              <div class="stack-row"><span>Operating costs</span><strong id="monthly-operating">-</strong></div>
+              <div class="stack-row"><span>NOI</span><strong id="monthly-noi">-</strong></div>
+              <div class="stack-row"><span>Bank payment</span><strong id="monthly-bank">-</strong></div>
+              <div class="stack-row"><span>Tax</span><strong id="monthly-tax">-</strong></div>
+              <div class="stack-row total-row"><span>Final monthly net</span><strong id="monthly-final-net">-</strong></div>
+              <p class="fact-note">
+                Operating costs already include platform fees, cleaning, utilities, insurance, condo,
+                maintenance, accounting, licensing, and IMI/property tax.
+              </p>
+            </div>
+
+            <div class="mini-panel">
+              <h3>Capital and return</h3>
+              <div class="stack-row"><span>Total project cost</span><strong id="capex">-</strong></div>
+              <div class="stack-row"><span>Equity needed</span><strong id="equity">-</strong></div>
+              <div class="stack-row"><span>Loan amount</span><strong id="loan">-</strong></div>
+              <div class="stack-row"><span>Cash return</span><strong id="cash-return">-</strong></div>
+              <div class="stack-row"><span>Payback years</span><strong id="payback">-</strong></div>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <section class="info-card">
+              <h3>Model info</h3>
+              <div id="model-info-grid" class="facts-list"></div>
+              <p id="model-info-note" class="fact-note"></p>
+            </section>
+
+            <section class="info-card">
+              <h3>Assumptions behind the forecast</h3>
+              <div id="assumptions-grid" class="facts-list"></div>
+              <p class="fact-note">
+                This app assumes the property is self-managed, always available, and operated like a strong host.
+              </p>
+            </section>
+          </div>
+
+          <section class="range-panel">
+            <h3>How confident is this forecast?</h3>
+            <div id="confidence-grid" class="confidence-grid"></div>
+            <p id="confidence-note"></p>
+          </section>
+
+          <div class="info-grid">
+            <section class="info-card">
+              <h3>Pricing guidance</h3>
+              <div id="pricing-guidance-grid" class="facts-list"></div>
+              <p id="pricing-guidance-note" class="fact-note"></p>
+            </section>
+
+            <section class="info-card">
+              <h3>How to move toward the target</h3>
+              <ul class="advice-list">
+                <li>Keep review scores high.</li>
+                <li>Reply quickly.</li>
+                <li>Keep the calendar available.</li>
+                <li>Avoid overpricing early.</li>
+                <li>Improve photos and listing description.</li>
+                <li>Maintain superhost-style standards.</li>
+                <li>Add visibility through multiple platforms or social media.</li>
+              </ul>
+              <p class="fact-note">
+                Extra visibility from multiple platforms and social media can help, but the simulator
+                does not directly model paid advertising performance.
+              </p>
+            </section>
+          </div>
+
+          <div class="detail-grid">
+            <section class="info-card">
+              <h3>Where the money goes</h3>
+              <div id="cost-breakdown-groups" class="cost-groups-grid"></div>
+            </section>
+
+            <section class="info-card">
+              <h3>Taxes, simply explained</h3>
+              <div id="tax-breakdown-grid" class="facts-list"></div>
+              <p id="tax-note" class="fact-note"></p>
+              <p id="tax-disclaimer" class="fact-note subtle-note"></p>
+            </section>
+          </div>
+
+          <section class="info-card">
+            <h3>Compare financing options</h3>
+            <p class="fact-note">
+              Same predicted price and occupancy are used across scenarios. Only financing changes.
+            </p>
+            <div class="table-wrap">
+              <table class="scenario-table">
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Monthly net</th>
+                    <th>Annual net</th>
+                    <th>Equity needed</th>
+                    <th>Loan amount</th>
+                    <th>Monthly bank payment</th>
+                    <th>Cash return</th>
+                    <th>Payback years</th>
+                  </tr>
+                </thead>
+                <tbody id="scenario-comparison-body"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="info-card">
+            <h3>3-year growth scenario</h3>
+            <p class="fact-note">
+              New listings often need time to build reviews and trust. This scenario shows how occupancy
+              could improve if the host keeps quality high, responds quickly, earns strong reviews, and
+              keeps pricing competitive.
+            </p>
+            <div class="table-wrap">
+              <table class="scenario-table growth-table">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Occupancy</th>
+                    <th>Occupied nights</th>
+                    <th>Expected reviews</th>
+                    <th>Monthly net</th>
+                    <th>Annual net</th>
+                    <th>Note</th>
+                  </tr>
+                </thead>
+                <tbody id="three-year-scenario-body"></tbody>
+              </table>
+            </div>
+            <p id="three-year-method" class="fact-note"></p>
+            <p id="three-year-note" class="fact-note">
+              This is not guaranteed. It assumes good reviews, strong availability, competitive pricing,
+              and superhost-style operations.
+            </p>
+          </section>
+
+          <section class="info-card glossary-card">
+            <h3>Glossary</h3>
+            <dl class="glossary-grid">
+              <div><dt><strong>Nightly price</strong></dt><dd>The estimated fair price per night for this property.</dd></div>
+              <div><dt><strong>Occupancy</strong></dt><dd>The share of nights expected to be booked during the year.</dd></div>
+              <div><dt><strong>Occupied nights</strong></dt><dd>The estimated number of booked nights in the first year.</dd></div>
+              <div><dt><strong>Gross revenue</strong></dt><dd>Money earned before costs.</dd></div>
+              <div><dt><strong>Operating costs</strong></dt><dd>Regular running costs such as platform fees, cleaning, utilities, insurance, condo, maintenance, accounting, licensing, and IMI/property tax.</dd></div>
+              <div><dt><strong>NOI</strong></dt><dd>Net operating income. Gross revenue minus operating costs, before bank payments and tax.</dd></div>
+              <div><dt><strong>Bank payment</strong></dt><dd>The estimated mortgage payment.</dd></div>
+              <div><dt><strong>Tax</strong></dt><dd>Estimated income tax based on the simplified tax assumptions used by the app.</dd></div>
+              <div><dt><strong>Final net</strong></dt><dd>Money left after operating costs, bank payment, and tax.</dd></div>
+              <div><dt><strong>Cash-on-equity return</strong></dt><dd>Annual net income divided by the cash you put into the deal.</dd></div>
+              <div><dt><strong>Payback years</strong></dt><dd>How many years it would take to recover your invested cash if results stayed the same.</dd></div>
+              <div><dt><strong>IMI</strong></dt><dd>Portugal’s municipal property tax.</dd></div>
+              <div><dt><strong>Closing costs</strong></dt><dd>Estimated purchase costs such as taxes, registration, notary, and legal fees.</dd></div>
+              <div><dt><strong>Review capture rate</strong></dt><dd>The estimated share of bookings that result in guest reviews.</dd></div>
+              <div><dt><strong>Likely range</strong></dt><dd>A forecast range using about one model error above and below the base estimate.</dd></div>
+              <div><dt><strong>Wider stress-test range</strong></dt><dd>A wider downside/upside range using about 1.96 model errors.</dd></div>
+              <div><dt><strong>Forecast strength</strong></dt><dd>How much support the historical test results give to the forecast.</dd></div>
+              <div><dt><strong>Stabilized occupancy</strong></dt><dd>A scenario target for a mature listing after it has built reviews, visibility, and trust.</dd></div>
+              <div><dt><strong>Occupancy ramp-up</strong></dt><dd>The assumed increase in occupancy over time as the listing becomes more established.</dd></div>
+              <div><dt><strong>Pricing discipline</strong></dt><dd>Avoiding large price increases until occupancy and reviews show the listing can support them.</dd></div>
+            </dl>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', path='/app.js') }}"></script>
+</body>
+</html>

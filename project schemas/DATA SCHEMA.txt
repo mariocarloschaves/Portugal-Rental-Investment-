@@ -19,6 +19,7 @@ latitude	Geographic latitude
 longitude	Geographic longitude
 room_type	Property type
 accommodates	Maximum number of guests
+
 2. Listing Metrics Table
 
 This table contains operational metrics extracted from listing datasets.

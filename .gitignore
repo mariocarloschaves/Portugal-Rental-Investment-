@@ -1,0 +1,10 @@
+code files/data/raw/
+data/raw/
+data/warehouse/
+*.db
+*.sqlite
+*.sqlite3
+__pycache__/
+*.pyc
+catboost_info/
+sql/build/02_load_portugal_rental_warehouse_lean_v3.sql

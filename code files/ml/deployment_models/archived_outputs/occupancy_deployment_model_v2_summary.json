@@ -1,0 +1,4708 @@
+{
+  "created_at_utc": "2026-05-15T11:11:55.523840+00:00",
+  "decision": {
+    "selected_model": "I_dynamic_top_model_blend",
+    "selected_r2": 0.7367868011287869,
+    "selected_rmse": 0.08369905794650104,
+    "selected_mae": 0.058830556923345115,
+    "reason": "selected dynamically by highest R2, then lowest RMSE, then lowest MAE",
+    "fair_price_model_stem": "nightly_price_deployment_model_v2",
+    "selected_model_uses_price_gap": true,
+    "dynamic_blend_best_config": {
+      "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+      "model_count": 3,
+      "components": [
+        "G_xgb_logit_plus_price_gap",
+        "H_xgb_hgb_blend_plus_price_gap",
+        "B_xgb_baseline"
+      ],
+      "weights": {
+        "G_xgb_logit_plus_price_gap": 0.55,
+        "H_xgb_hgb_blend_plus_price_gap": 0.25,
+        "B_xgb_baseline": 0.19999999999999996
+      },
+      "r2": 0.7461485241837997,
+      "rmse": 0.08180253118802863,
+      "mae": 0.057610111803101674
+    }
+  },
+  "ranked_model_metrics": [
+    {
+      "model_variant": "I_dynamic_top_model_blend",
+      "r2": 0.7367868011287869,
+      "rmse": 0.08369905794650104,
+      "mae": 0.058830556923345115
+    },
+    {
+      "model_variant": "H_xgb_hgb_blend_plus_price_gap",
+      "r2": 0.7354114050569655,
+      "rmse": 0.0839174538348435,
+      "mae": 0.059228511604062214
+    },
+    {
+      "model_variant": "G_xgb_logit_plus_price_gap",
+      "r2": 0.7352552984293099,
+      "rmse": 0.08394220573134864,
+      "mae": 0.05892594163315463
+    },
+    {
+      "model_variant": "A_hgb_baseline",
+      "r2": 0.7344560336261663,
+      "rmse": 0.08406882108696379,
+      "mae": 0.05915048103098835
+    },
+    {
+      "model_variant": "D_hgb_plus_price_gap",
+      "r2": 0.7331106284323524,
+      "rmse": 0.08428152357336825,
+      "mae": 0.05927913195991458
+    },
+    {
+      "model_variant": "E_xgb_plus_price_gap",
+      "r2": 0.7314359385932097,
+      "rmse": 0.08454553687192222,
+      "mae": 0.05992061242769383
+    },
+    {
+      "model_variant": "B_xgb_baseline",
+      "r2": 0.7299487707173666,
+      "rmse": 0.08477929827798333,
+      "mae": 0.06014109985003558
+    },
+    {
+      "model_variant": "F_catboost_plus_price_gap",
+      "r2": 0.7260008322113711,
+      "rmse": 0.08539675342148871,
+      "mae": 0.06176935398091431
+    },
+    {
+      "model_variant": "C_catboost_baseline",
+      "r2": 0.7225587669904696,
+      "rmse": 0.0859314700134321,
+      "mae": 0.062417182846955355
+    }
+  ],
+  "bucket_metrics": [
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "A_hgb_baseline",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0549372452861014,
+      "rmse": 0.10257521047871002,
+      "mae": 0.07635384793640664
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "B_xgb_baseline",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0802753842765163,
+      "rmse": 0.10320566819812668,
+      "mae": 0.07721430946579898
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "C_catboost_baseline",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.170008286693378,
+      "rmse": 0.10540806260342603,
+      "mae": 0.08080949163114262
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "D_hgb_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0655815965361044,
+      "rmse": 0.10284053155139125,
+      "mae": 0.07628802051219703
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "E_xgb_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.088063331863522,
+      "rmse": 0.10339867376944008,
+      "mae": 0.07705968759436832
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "F_catboost_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.1467969377450005,
+      "rmse": 0.1048428018143215,
+      "mae": 0.08065557519922274
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "G_xgb_logit_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0189228896054487,
+      "rmse": 0.10167238257796263,
+      "mae": 0.07491003242530704
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "H_xgb_hgb_blend_plus_price_gap",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0595889140902894,
+      "rmse": 0.10269124229173235,
+      "mae": 0.07631567369097794
+    },
+    {
+      "occupancy_bucket": "low_occupancy",
+      "model_variant": "I_dynamic_top_model_blend",
+      "rows": 538,
+      "actual_mean_occupancy": 0.3112084330600397,
+      "r2": -1.0243975309059739,
+      "rmse": 0.10181013994275731,
+      "mae": 0.07518744815524048
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "A_hgb_baseline",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.207621936491948,
+      "rmse": 0.07495111986372009,
+      "mae": 0.04931049311009469
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "B_xgb_baseline",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.360820991865245,
+      "rmse": 0.07604559373222917,
+      "mae": 0.05038755221684486
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "C_catboost_baseline",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.4853739581369885,
+      "rmse": 0.0769239403543873,
+      "mae": 0.05220733489603313
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "D_hgb_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.230441340015773,
+      "rmse": 0.07511515541762918,
+      "mae": 0.04945042171728527
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "E_xgb_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.179675499537714,
+      "rmse": 0.07474973864782045,
+      "mae": 0.049558178892190954
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "F_catboost_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.426497817439192,
+      "rmse": 0.07651000293067213,
+      "mae": 0.05182111557932679
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "G_xgb_logit_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.101784084488387,
+      "rmse": 0.07418557028589431,
+      "mae": 0.048721632394572036
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "H_xgb_hgb_blend_plus_price_gap",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.127154932535219,
+      "rmse": 0.07436980159066357,
+      "mae": 0.04909761677819665
+    },
+    {
+      "occupancy_bucket": "medium_high_occupancy",
+      "model_variant": "I_dynamic_top_model_blend",
+      "rows": 980,
+      "actual_mean_occupancy": 0.6809505171931786,
+      "r2": -4.109521445351936,
+      "rmse": 0.07424180385550243,
+      "mae": 0.04879194939170058
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "A_hgb_baseline",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.9424641929671775,
+      "rmse": 0.07849811033024058,
+      "mae": 0.0599533314810106
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "B_xgb_baseline",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.950660826500719,
+      "rmse": 0.07860736786757798,
+      "mae": 0.06091354272218092
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "C_catboost_baseline",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.9652098224830334,
+      "rmse": 0.07880092653726412,
+      "mae": 0.06264614530246478
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "D_hgb_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.9604650632803353,
+      "rmse": 0.07873785492792346,
+      "mae": 0.060275724085481396
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "E_xgb_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -2.040475116798535,
+      "rmse": 0.07979475316677022,
+      "mae": 0.061855110202273404
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "F_catboost_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.9087234626773149,
+      "rmse": 0.0780467505252708,
+      "mae": 0.060917359401423295
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "G_xgb_logit_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -2.1090812781104185,
+      "rmse": 0.08068998722041754,
+      "mae": 0.06182611183529322
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "H_xgb_hgb_blend_plus_price_gap",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -1.9635942346367314,
+      "rmse": 0.07877945635932462,
+      "mae": 0.06075104519948165
+    },
+    {
+      "occupancy_bucket": "medium_low_occupancy",
+      "model_variant": "I_dynamic_top_model_blend",
+      "rows": 483,
+      "actual_mean_occupancy": 0.4989477863807822,
+      "r2": -2.005445871482086,
+      "rmse": 0.0793337647844187,
+      "mae": 0.060979268928007514
+    }
+  ],
+  "dynamic_blend_tuning": {
+    "validation_candidate_metrics": [
+      {
+        "model_variant": "G_xgb_logit_plus_price_gap",
+        "r2": 0.7445453420534511,
+        "rmse": 0.08206043386259843,
+        "mae": 0.05775160926981847
+      },
+      {
+        "model_variant": "H_xgb_hgb_blend_plus_price_gap",
+        "r2": 0.7429556374559194,
+        "rmse": 0.0823153705454971,
+        "mae": 0.058347794276986456
+      },
+      {
+        "model_variant": "B_xgb_baseline",
+        "r2": 0.7408655212793804,
+        "rmse": 0.08264936027756684,
+        "mae": 0.0582390532339328
+      },
+      {
+        "model_variant": "E_xgb_plus_price_gap",
+        "r2": 0.7405945808237147,
+        "rmse": 0.0826925563917736,
+        "mae": 0.05903204994632892
+      },
+      {
+        "model_variant": "A_hgb_baseline",
+        "r2": 0.736590465740759,
+        "rmse": 0.08332832288137401,
+        "mae": 0.05856274926097704
+      },
+      {
+        "model_variant": "D_hgb_plus_price_gap",
+        "r2": 0.7356414469081294,
+        "rmse": 0.08347829666258001,
+        "mae": 0.058778296106028693
+      },
+      {
+        "model_variant": "C_catboost_baseline",
+        "r2": 0.7331189995405937,
+        "rmse": 0.08387561630282339,
+        "mae": 0.060025656784318523
+      },
+      {
+        "model_variant": "F_catboost_plus_price_gap",
+        "r2": 0.732314740656405,
+        "rmse": 0.0840019028577347,
+        "mae": 0.060233538548745996
+      }
+    ],
+    "blend_validation_metrics": [
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7461485241837997,
+        "rmse": 0.08180253118802863,
+        "mae": 0.057610111803101674
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.2
+        },
+        "r2": 0.7461476439160617,
+        "rmse": 0.0818026730191258,
+        "mae": 0.05762758757953196
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.74614376902491,
+        "rmse": 0.0818032973490496,
+        "mae": 0.057607766137383914
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.24999999999999994
+        },
+        "r2": 0.7461299012480229,
+        "rmse": 0.08180553171292416,
+        "mae": 0.05759257510880581
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.14999999999999997
+        },
+        "r2": 0.746122036066624,
+        "rmse": 0.08180679891683311,
+        "mae": 0.05763363956819797
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.25000000000000006
+        },
+        "r2": 0.7461184071370364,
+        "rmse": 0.08180738358760876,
+        "mae": 0.05762764894919508
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.2
+        },
+        "r2": 0.7461101697065002,
+        "rmse": 0.08180871073615456,
+        "mae": 0.05759775506344043
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.20000000000000007
+        },
+        "r2": 0.7461075339976884,
+        "rmse": 0.08180913537581012,
+        "mae": 0.0576489491304404
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.7461064077570292,
+        "rmse": 0.08180931682403075,
+        "mae": 0.05765354898888543
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.746098429591391,
+        "rmse": 0.08181060217185555,
+        "mae": 0.05762102505553811
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.3
+        },
+        "r2": 0.7460947852131197,
+        "rmse": 0.08181118930432302,
+        "mae": 0.057592272053601526
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.30000000000000004
+        },
+        "r2": 0.7460841713870529,
+        "rmse": 0.0818128992350544,
+        "mae": 0.05761227159977435
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7460767987658885,
+        "rmse": 0.0818140869734033,
+        "mae": 0.05758071254262391
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.29999999999999993
+        },
+        "r2": 0.7460661693603003,
+        "rmse": 0.08181579935338344,
+        "mae": 0.05757922092622471
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7460538178715757,
+        "rmse": 0.08181778911314205,
+        "mae": 0.05765304803537398
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.7460515498109244,
+        "rmse": 0.08181815448050486,
+        "mae": 0.057678508255986055
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7460504355302428,
+        "rmse": 0.08181833398207079,
+        "mae": 0.05766333529236857
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.10000000000000003
+        },
+        "r2": 0.7460415770754985,
+        "rmse": 0.0818197609931583,
+        "mae": 0.05764831039227689
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.14999999999999997
+        },
+        "r2": 0.7460355883445899,
+        "rmse": 0.08182072570548653,
+        "mae": 0.057614320041527875
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.3
+        },
+        "r2": 0.7460343301081556,
+        "rmse": 0.08182092839075644,
+        "mae": 0.05763664234996263
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.19999999999999998
+        },
+        "r2": 0.7460325805861855,
+        "rmse": 0.08182121021480251,
+        "mae": 0.05759449358052073
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7460281967769595,
+        "rmse": 0.08182191638221012,
+        "mae": 0.057676234352898606
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7460200591603693,
+        "rmse": 0.0818232272168033,
+        "mae": 0.05768727548722759
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.35000000000000003
+        },
+        "r2": 0.7460048192713227,
+        "rmse": 0.08182568205279284,
+        "mae": 0.05759936188676537
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7460006850893262,
+        "rmse": 0.08182634797268178,
+        "mae": 0.05758216490310018
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.30000000000000004
+        },
+        "r2": 0.7459983188420238,
+        "rmse": 0.08182672911726137,
+        "mae": 0.057571568166848275
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7459934837206235,
+        "rmse": 0.08182750793156776,
+        "mae": 0.05764011312269203
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.24999999999999997
+        },
+        "r2": 0.7459844617692899,
+        "rmse": 0.08182896111719838,
+        "mae": 0.057579908316947155
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7459697259252664,
+        "rmse": 0.081831334596649,
+        "mae": 0.05762279579919952
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.14999999999999997
+        },
+        "r2": 0.7459574646376972,
+        "rmse": 0.08183330945067446,
+        "mae": 0.05770856275137766
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.745957321214318,
+        "rmse": 0.08183333255075904,
+        "mae": 0.05757256808683511
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.10000000000000003
+        },
+        "r2": 0.7459504531681114,
+        "rmse": 0.08183443872573973,
+        "mae": 0.05771524708825621
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7459499941439625,
+        "rmse": 0.08183451265613459,
+        "mae": 0.05768315620986889
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.30000000000000004
+        },
+        "r2": 0.7459452544311691,
+        "rmse": 0.08183527603001482,
+        "mae": 0.057664661134414597
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.7459396140101521,
+        "rmse": 0.08183618446187244,
+        "mae": 0.057684090066543216
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.04999999999999993
+        },
+        "r2": 0.7459337244536188,
+        "rmse": 0.08183713300810039,
+        "mae": 0.05770131207483857
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.15000000000000005
+        },
+        "r2": 0.7459335248714707,
+        "rmse": 0.08183716515173607,
+        "mae": 0.0576141326516581
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.20000000000000004
+        },
+        "r2": 0.7459157690725209,
+        "rmse": 0.08184002475543524,
+        "mae": 0.057595258787428626
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.2
+        },
+        "r2": 0.7459096250300268,
+        "rmse": 0.08184101424137909,
+        "mae": 0.05770996284397647
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.04999999999999999
+        },
+        "r2": 0.7459062685379969,
+        "rmse": 0.08184155479275747,
+        "mae": 0.05767232072990183
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.10000000000000003
+        },
+        "r2": 0.7459061683064718,
+        "rmse": 0.0818415709346414,
+        "mae": 0.057637001281733546
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.35000000000000003
+        },
+        "r2": 0.745895398245163,
+        "rmse": 0.08184330539114257,
+        "mae": 0.05764904286433256
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.3
+        },
+        "r2": 0.7458912339378567,
+        "rmse": 0.08184397601905702,
+        "mae": 0.057570819845163705
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.04999999999999999
+        },
+        "r2": 0.7458886000326777,
+        "rmse": 0.08184440018528524,
+        "mae": 0.05772688399060157
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.7458803616580785,
+        "rmse": 0.08184572688562763,
+        "mae": 0.057594994581958985
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.35000000000000003
+        },
+        "r2": 0.7458747227136431,
+        "rmse": 0.08184663496370634,
+        "mae": 0.057568197826271116
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.7458614794286826,
+        "rmse": 0.08184876758152422,
+        "mae": 0.05758025920694377
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.39999999999999997
+        },
+        "r2": 0.7458600162841784,
+        "rmse": 0.08184900319398043,
+        "mae": 0.05761462547173101
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.25000000000000006
+        },
+        "r2": 0.7458529022123117,
+        "rmse": 0.08185014877447427,
+        "mae": 0.05758156934380566
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7458416200239684,
+        "rmse": 0.0818519655147679,
+        "mae": 0.05774840672399076
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.745833701173602,
+        "rmse": 0.08185324064175453,
+        "mae": 0.057664977556658975
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.745824144874213,
+        "rmse": 0.08185477941130176,
+        "mae": 0.05774613548545726
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.29999999999999993
+        },
+        "r2": 0.7458169506608816,
+        "rmse": 0.08185593781515194,
+        "mae": 0.05769548493876691
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.24999999999999994
+        },
+        "r2": 0.7458069423825798,
+        "rmse": 0.08185754930919999,
+        "mae": 0.057717424540943446
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.7458042460034775,
+        "rmse": 0.08185798346425142,
+        "mae": 0.057758348830734524
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.39999999999999997
+        },
+        "r2": 0.7458033674921498,
+        "rmse": 0.08185812491646387,
+        "mae": 0.05757302085094575
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.7458004366402946,
+        "rmse": 0.08185859682150716,
+        "mae": 0.057637759375782784
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4
+        },
+        "r2": 0.7457925397782421,
+        "rmse": 0.08185986830486071,
+        "mae": 0.057727201192257854
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7457925397782421,
+        "rmse": 0.08185986830486071,
+        "mae": 0.057727201192257854
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.75,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.15
+        },
+        "r2": 0.7457922301532046,
+        "rmse": 0.08185991815756184,
+        "mae": 0.0576157038251974
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7457818424122465,
+        "rmse": 0.08186159066926056,
+        "mae": 0.05767781278413773
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.75,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.1
+        },
+        "r2": 0.745779621597859,
+        "rmse": 0.08186194823420206,
+        "mae": 0.05763824202915641
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35
+        },
+        "r2": 0.7457739421888068,
+        "rmse": 0.0818628626473111,
+        "mae": 0.05771117534834669
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7457739421888068,
+        "rmse": 0.0818628626473111,
+        "mae": 0.05771117534834669
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.44999999999999996
+        },
+        "r2": 0.7457719022104312,
+        "rmse": 0.08186319109148395,
+        "mae": 0.057747351122639894
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.75,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.2
+        },
+        "r2": 0.7457597263630227,
+        "rmse": 0.08186515142119884,
+        "mae": 0.05759892315206746
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.65,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7457528899556102,
+        "rmse": 0.08186625207247995,
+        "mae": 0.05756900167346738
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7457518253088453,
+        "rmse": 0.08186642347767147,
+        "mae": 0.057750097223496166
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.30000000000000004
+        },
+        "r2": 0.7457449263062568,
+        "rmse": 0.08186753418935465,
+        "mae": 0.057576110721542006
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.75,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.04999999999999999
+        },
+        "r2": 0.7457219024654318,
+        "rmse": 0.08187124082611708,
+        "mae": 0.05766518790069124
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.30000000000000004
+        },
+        "r2": 0.7457161228741684,
+        "rmse": 0.08187217126335099,
+        "mae": 0.05770095475663967
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.7,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 5.551115123125783e-17
+        },
+        "r2": 0.7457161228741684,
+        "rmse": 0.081872171263351,
+        "mae": 0.05770095475663967
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5
+        },
+        "r2": 0.7457120297384223,
+        "rmse": 0.08187283019730711,
+        "mae": 0.05777506321278662
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7457120297384223,
+        "rmse": 0.08187283019730711,
+        "mae": 0.05777506321278662
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.45000000000000007
+        },
+        "r2": 0.7457107883593193,
+        "rmse": 0.08187303003982496,
+        "mae": 0.05759742736746105
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.6,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.7457060209697401,
+        "rmse": 0.08187379751005758,
+        "mae": 0.057570477202302
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.44999999999999996
+        },
+        "r2": 0.7457051909065535,
+        "rmse": 0.08187393113565514,
+        "mae": 0.05761567190453715
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.39999999999999997
+        },
+        "r2": 0.7457016287840661,
+        "rmse": 0.08187450457235042,
+        "mae": 0.05766597702875524
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.745693552225511,
+        "rmse": 0.0818758047359669,
+        "mae": 0.057788714675947504
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.75,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7456821115088135,
+        "rmse": 0.0818776464261001,
+        "mae": 0.057587714647203934
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.04999999999999993
+        },
+        "r2": 0.7456806648976273,
+        "rmse": 0.08187787929401098,
+        "mae": 0.057795627942214295
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.45
+        },
+        "r2": 0.7456771581335678,
+        "rmse": 0.08187844379181937,
+        "mae": 0.05758481954337
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.45
+        },
+        "r2": 0.7456603592478446,
+        "rmse": 0.0818811479215341,
+        "mae": 0.05763575853770989
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.1499999999999999
+        },
+        "r2": 0.745651597196002,
+        "rmse": 0.08188255832040459,
+        "mae": 0.05778823113518791
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.3
+        },
+        "r2": 0.7456494142908383,
+        "rmse": 0.08188290969173995,
+        "mae": 0.05773086396556841
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7456290540444966,
+        "rmse": 0.08188618690623124,
+        "mae": 0.057711904041208774
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7456246579564992,
+        "rmse": 0.08188689448965192,
+        "mae": 0.057757378324487754
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.75,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25
+        },
+        "r2": 0.7456190721664407,
+        "rmse": 0.08188779355574555,
+        "mae": 0.05769839606963926
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.75,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7456190721664407,
+        "rmse": 0.08188779355574555,
+        "mae": 0.05769839606963926
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.8,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.09999999999999995
+        },
+        "r2": 0.7456138417959491,
+        "rmse": 0.08188863540599962,
+        "mae": 0.05764274514787824
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55
+        },
+        "r2": 0.7456129276722798,
+        "rmse": 0.08188878253718229,
+        "mae": 0.05780929370879062
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7456129276722798,
+        "rmse": 0.08188878253718229,
+        "mae": 0.05780929370879062
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.8,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.14999999999999997
+        },
+        "r2": 0.7456117022910014,
+        "rmse": 0.08188897976587649,
+        "mae": 0.05762280558425497
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.55,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.44999999999999996
+        },
+        "r2": 0.7456042981865542,
+        "rmse": 0.08189017146799686,
+        "mae": 0.05758029652882103
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.44999999999999996
+        },
+        "r2": 0.7455762993172803,
+        "rmse": 0.08189467777275244,
+        "mae": 0.0576617340011583
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.8,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.04999999999999996
+        },
+        "r2": 0.7455708707146037,
+        "rmse": 0.08189555145569617,
+        "mae": 0.057669822434484985
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.8,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7455644504589491,
+        "rmse": 0.0818965847239031,
+        "mae": 0.05760954681846357
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.745563588457946,
+        "rmse": 0.08189672345231294,
+        "mae": 0.0576979889288117
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7455547928580348,
+        "rmse": 0.0818981389820007,
+        "mae": 0.057793535599451246
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.7455178490734077,
+        "rmse": 0.08190408430403001,
+        "mae": 0.057839617590055174
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7455062565718531,
+        "rmse": 0.08190594978341333,
+        "mae": 0.05783420629401972
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7455052581488055,
+        "rmse": 0.08190611044887154,
+        "mae": 0.05762082896728495
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7454961076121696,
+        "rmse": 0.0819075829314108,
+        "mae": 0.05760327728494638
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.8,
+          "H_xgb_hgb_blend_plus_price_gap": 0.19999999999999996
+        },
+        "r2": 0.7454827884666946,
+        "rmse": 0.08190972616924004,
+        "mae": 0.057701455912322556
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7454751745435608,
+        "rmse": 0.08191095133136385,
+        "mae": 0.05764192572616112
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6
+        },
+        "r2": 0.7454745986047224,
+        "rmse": 0.08191104400537194,
+        "mae": 0.05785025905446889
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7454745986047224,
+        "rmse": 0.08191104400537194,
+        "mae": 0.05785025905446889
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.45
+        },
+        "r2": 0.7454530069817459,
+        "rmse": 0.0819145182261449,
+        "mae": 0.05769072084358987
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.5,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7454477293217743,
+        "rmse": 0.08191536741066673,
+        "mae": 0.05759521883920122
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.30000000000000004
+        },
+        "r2": 0.7454426481532758,
+        "rmse": 0.08191618497105668,
+        "mae": 0.05777422770625423
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.7454398167232298,
+        "rmse": 0.08191664054482176,
+        "mae": 0.05783470654567796
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.35000000000000003
+        },
+        "r2": 0.7454370358773864,
+        "rmse": 0.08191708797718197,
+        "mae": 0.0577507438266742
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.85,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.10000000000000002
+        },
+        "r2": 0.7454088338097,
+        "rmse": 0.0819216254936386,
+        "mae": 0.0576530776293479
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.49999999999999994
+        },
+        "r2": 0.7454058626069298,
+        "rmse": 0.08192210352485643,
+        "mae": 0.05766587264280478
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7454031437947517,
+        "rmse": 0.08192254094698322,
+        "mae": 0.057803562373160644
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.85,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.745391946225505,
+        "rmse": 0.08192434246812644,
+        "mae": 0.057634656262913204
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.7453863183006135,
+        "rmse": 0.08192524790197174,
+        "mae": 0.057736660759305655
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.85,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.05000000000000002
+        },
+        "r2": 0.7453806107983912,
+        "rmse": 0.08192616612818598,
+        "mae": 0.057677875070876454
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.20000000000000007
+        },
+        "r2": 0.7453185307034034,
+        "rmse": 0.08193615294462368,
+        "mae": 0.057840884056731844
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.04999999999999993
+        },
+        "r2": 0.7453158054535116,
+        "rmse": 0.08193659132731247,
+        "mae": 0.057890060499539465
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.85,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15000000000000002
+        },
+        "r2": 0.7453072766205189,
+        "rmse": 0.08193796325707481,
+        "mae": 0.057709393449070855
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.85,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 2.7755575615628914e-17
+        },
+        "r2": 0.7453072766205189,
+        "rmse": 0.08193796325707481,
+        "mae": 0.05770939344907086
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7452973183302698,
+        "rmse": 0.08193956509719413,
+        "mae": 0.05769386860442035
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65
+        },
+        "r2": 0.7452970347547407,
+        "rmse": 0.08193961071125855,
+        "mae": 0.05789804711040902
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7452970347547407,
+        "rmse": 0.08193961071125855,
+        "mae": 0.05789804711040902
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.45000000000000007
+        },
+        "r2": 0.7452904847831583,
+        "rmse": 0.08194066428884586,
+        "mae": 0.05772788371301718
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7452797280586972,
+        "rmse": 0.08194239450265735,
+        "mae": 0.05788483348988893
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.5499999999999999
+        },
+        "r2": 0.7452602147461016,
+        "rmse": 0.08194553311609551,
+        "mae": 0.057631456189618846
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.55
+        },
+        "r2": 0.7452448792043196,
+        "rmse": 0.08194799967276824,
+        "mae": 0.05765202128878301
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.45,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.55
+        },
+        "r2": 0.7452363162100661,
+        "rmse": 0.0819493769058372,
+        "mae": 0.057620198657302384
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.745205786347904,
+        "rmse": 0.08195428700172286,
+        "mae": 0.057798544476904176
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.29999999999999993
+        },
+        "r2": 0.7451966506566663,
+        "rmse": 0.08195575623122334,
+        "mae": 0.05782358112764229
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.5499999999999999
+        },
+        "r2": 0.7451903152716197,
+        "rmse": 0.0819567750915453,
+        "mae": 0.0576766104800693
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.7451888065784833,
+        "rmse": 0.08195701771858901,
+        "mae": 0.05788418103116161
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.39999999999999997
+        },
+        "r2": 0.7451698167775849,
+        "rmse": 0.08196007158453619,
+        "mae": 0.05778156524933407
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.9,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7451645848821169,
+        "rmse": 0.08196091293763011,
+        "mae": 0.05766806672351805
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.9,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.049999999999999975
+        },
+        "r2": 0.7451511097241859,
+        "rmse": 0.08196307986887438,
+        "mae": 0.05769081318085115
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.745149544158705,
+        "rmse": 0.08196333162271043,
+        "mae": 0.057726214494140914
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7451423982772812,
+        "rmse": 0.08196448072040638,
+        "mae": 0.05785520465117332
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.55
+        },
+        "r2": 0.7450965190638326,
+        "rmse": 0.08197185797079475,
+        "mae": 0.05770462142363118
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.9,
+          "H_xgb_hgb_blend_plus_price_gap": 0.09999999999999998
+        },
+        "r2": 0.745092523399691,
+        "rmse": 0.08197250043108752,
+        "mae": 0.05772035491127482
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.44999999999999996
+        },
+        "r2": 0.7450887312155492,
+        "rmse": 0.08197311016930357,
+        "mae": 0.05777026180736895
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7
+        },
+        "r2": 0.7450802431686063,
+        "rmse": 0.08197447493010537,
+        "mae": 0.057949510893233525
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7450802431686063,
+        "rmse": 0.08197447493010537,
+        "mae": 0.057949510893233525
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.7450745289091829,
+        "rmse": 0.08197539369135923,
+        "mae": 0.05794148727912906
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7450430371963737,
+        "rmse": 0.08198045686888893,
+        "mae": 0.05789421400913621
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7,
+          "B_xgb_baseline": 0.10000000000000009
+        },
+        "r2": 0.7450139699054164,
+        "rmse": 0.08198512997499101,
+        "mae": 0.05793872682554308
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.4,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.6
+        },
+        "r2": 0.7449700593615238,
+        "rmse": 0.08199218890420554,
+        "mae": 0.05765132660331228
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.6
+        },
+        "r2": 0.744969471857533,
+        "rmse": 0.08199228334549023,
+        "mae": 0.057668956469974025
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.55
+        },
+        "r2": 0.7449634929292887,
+        "rmse": 0.08199324445220381,
+        "mae": 0.05773481587675821
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7449625386147947,
+        "rmse": 0.08199339785625817,
+        "mae": 0.0577656392722271
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7449353060453061,
+        "rmse": 0.0819977753137687,
+        "mae": 0.05785247171034938
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.6
+        },
+        "r2": 0.7449296559030922,
+        "rmse": 0.08199868350791911,
+        "mae": 0.05769269564958375
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.7449140845006906,
+        "rmse": 0.08200118637632493,
+        "mae": 0.05783378531267834
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.30000000000000004
+        },
+        "r2": 0.7449114223676955,
+        "rmse": 0.08200161426646133,
+        "mae": 0.05787858709496522
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.7448985650846633,
+        "rmse": 0.08200368081269514,
+        "mae": 0.05794354222981489
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.95,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.7448823855854034,
+        "rmse": 0.08200628126348602,
+        "mae": 0.057707766692958226
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.6
+        },
+        "r2": 0.7448506077385066,
+        "rmse": 0.08201138851942812,
+        "mae": 0.05771941207937156
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.45
+        },
+        "r2": 0.7448477469133202,
+        "rmse": 0.0820118482884797,
+        "mae": 0.057820559817950694
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7448424219481993,
+        "rmse": 0.08201270406762308,
+        "mae": 0.057913540467618985
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.95,
+          "H_xgb_hgb_blend_plus_price_gap": 0.050000000000000044
+        },
+        "r2": 0.7448385472603904,
+        "rmse": 0.0820133267659977,
+        "mae": 0.05773391488118507
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.95,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 4.163336342344337e-17
+        },
+        "r2": 0.7448385472603904,
+        "rmse": 0.0820133267659977,
+        "mae": 0.05773391488118507
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.75
+        },
+        "r2": 0.7448242185931051,
+        "rmse": 0.08201562947505195,
+        "mae": 0.0580025162035727
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.75,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7448242185931051,
+        "rmse": 0.08201562947505195,
+        "mae": 0.0580025162035727
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.75,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.7447940227565775,
+        "rmse": 0.08202048192865652,
+        "mae": 0.05799831252559291
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.55
+        },
+        "r2": 0.7447912354190753,
+        "rmse": 0.0820209298377209,
+        "mae": 0.05777148003761727
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7447363023555145,
+        "rmse": 0.08202975676521192,
+        "mae": 0.057812351764497415
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.6000000000000001
+        },
+        "r2": 0.7447323296153119,
+        "rmse": 0.08203039508873299,
+        "mae": 0.05775014896528411
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7,
+          "B_xgb_baseline": 0.20000000000000007
+        },
+        "r2": 0.7447283128584847,
+        "rmse": 0.08203104047961392,
+        "mae": 0.057956420706854916
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.75,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7447089804063862,
+        "rmse": 0.08203414664300028,
+        "mae": 0.058000493084469584
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.35,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.65
+        },
+        "r2": 0.7446489461331279,
+        "rmse": 0.08204379165692446,
+        "mae": 0.05769194254114051
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7446255949272307,
+        "rmse": 0.0820475429194419,
+        "mae": 0.05791364420084666
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.6499999999999999
+        },
+        "r2": 0.7446238780520475,
+        "rmse": 0.08204781872067868,
+        "mae": 0.05771272233712647
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.3999999999999999
+        },
+        "r2": 0.7446191213986941,
+        "rmse": 0.08204858283130068,
+        "mae": 0.0578918213139168
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.29999999999999993
+        },
+        "r2": 0.7445869632728702,
+        "rmse": 0.08205374853831776,
+        "mae": 0.057941399172515846
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.55
+        },
+        "r2": 0.7445797472127418,
+        "rmse": 0.08205490764242762,
+        "mae": 0.05781334829020757
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.6
+        },
+        "r2": 0.7445748201131236,
+        "rmse": 0.08205569906509283,
+        "mae": 0.05778558837424007
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.75,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.7445690927407361,
+        "rmse": 0.08205661902316198,
+        "mae": 0.058009495932892244
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.44999999999999996
+        },
+        "r2": 0.7445675317763661,
+        "rmse": 0.08205686975096994,
+        "mae": 0.05787457343061472
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.65
+        },
+        "r2": 0.7445595778257235,
+        "rmse": 0.08205814733172458,
+        "mae": 0.05774023626896628
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 1.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0
+        },
+        "r2": 0.7445453420534511,
+        "rmse": 0.08206043386259843,
+        "mae": 0.05775160926981847
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 1.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7445453420534511,
+        "rmse": 0.08206043386259843,
+        "mae": 0.05775160926981847
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.8
+        },
+        "r2": 0.7445289644411748,
+        "rmse": 0.08206306433416578,
+        "mae": 0.05806179327195387
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.8,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7445289644411748,
+        "rmse": 0.08206306433416578,
+        "mae": 0.05806179327195387
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7445032148228878,
+        "rmse": 0.08206719990932804,
+        "mae": 0.05797866927781435
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.8,
+          "B_xgb_baseline": 0.04999999999999993
+        },
+        "r2": 0.7444742852615471,
+        "rmse": 0.0820718459577901,
+        "mae": 0.05806103073034811
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.49999999999999994
+        },
+        "r2": 0.7444708352518841,
+        "rmse": 0.08207240000712752,
+        "mae": 0.05786536071238046
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.65
+        },
+        "r2": 0.7444560476089608,
+        "rmse": 0.0820747747649914,
+        "mae": 0.057770607725250944
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.6000000000000001
+        },
+        "r2": 0.7443780799340656,
+        "rmse": 0.08208729451211426,
+        "mae": 0.05782633396117706
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.75,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7443743577339904,
+        "rmse": 0.0820878921608242,
+        "mae": 0.05802365630738456
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.8,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7443647600379999,
+        "rmse": 0.08208943317844557,
+        "mae": 0.05806660505849196
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.5499999999999999
+        },
+        "r2": 0.7443290281524333,
+        "rmse": 0.08209517007868956,
+        "mae": 0.05786302887890553
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.6499999999999999
+        },
+        "r2": 0.7443132860098782,
+        "rmse": 0.08209769741679246,
+        "mae": 0.05780499797261086
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.6,
+          "B_xgb_baseline": 0.4
+        },
+        "r2": 0.7442849274953409,
+        "rmse": 0.0821022500667091,
+        "mae": 0.05795623453457477
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.65,
+          "B_xgb_baseline": 0.35
+        },
+        "r2": 0.7442766530077988,
+        "rmse": 0.08210357839777523,
+        "mae": 0.05798184106382905
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.3,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.7
+        },
+        "r2": 0.7442729950463424,
+        "rmse": 0.08210416561567055,
+        "mae": 0.05774060491218346
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.55,
+          "B_xgb_baseline": 0.44999999999999996
+        },
+        "r2": 0.7442480858380554,
+        "rmse": 0.08210816421558993,
+        "mae": 0.05793540132409815
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.7
+        },
+        "r2": 0.7442234428863438,
+        "rmse": 0.08211211988253779,
+        "mae": 0.05776551557171939
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.7,
+          "B_xgb_baseline": 0.30000000000000004
+        },
+        "r2": 0.7442232733766883,
+        "rmse": 0.08211214709143257,
+        "mae": 0.05801158316432281
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.8,
+          "B_xgb_baseline": 0.1499999999999999
+        },
+        "r2": 0.7442003896198275,
+        "rmse": 0.0821158202019767,
+        "mae": 0.05807875421390742
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.85
+        },
+        "r2": 0.7441944789501442,
+        "rmse": 0.08211676890687217,
+        "mae": 0.058127242080806565
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.85,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7441944789501442,
+        "rmse": 0.08211676890687217,
+        "mae": 0.058127242080806565
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.5,
+          "B_xgb_baseline": 0.5
+        },
+        "r2": 0.7441661373468968,
+        "rmse": 0.08212131778528438,
+        "mae": 0.05792262571029175
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.6
+        },
+        "r2": 0.7441421088914073,
+        "rmse": 0.08212517419834468,
+        "mae": 0.05787281259550052
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.7000000000000001
+        },
+        "r2": 0.7441346607040537,
+        "rmse": 0.08212636954789922,
+        "mae": 0.0577953262100442
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.65
+        },
+        "r2": 0.7441312937531668,
+        "rmse": 0.08212690989960116,
+        "mae": 0.05784629803034088
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.75,
+          "B_xgb_baseline": 0.25
+        },
+        "r2": 0.7441247768962198,
+        "rmse": 0.08212795576004131,
+        "mae": 0.05804976549088013
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.85,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.744115316877912,
+        "rmse": 0.08212947393123185,
+        "mae": 0.058128443052722946
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.45,
+          "B_xgb_baseline": 0.55
+        },
+        "r2": 0.744039078290768,
+        "rmse": 0.08214170789667209,
+        "mae": 0.057919669273993946
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.7
+        },
+        "r2": 0.7440066471361194,
+        "rmse": 0.08214691155439545,
+        "mae": 0.05783301744574658
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.85,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7439813089022567,
+        "rmse": 0.08215097690634626,
+        "mae": 0.058138205401590676
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.8,
+          "B_xgb_baseline": 0.19999999999999996
+        },
+        "r2": 0.7439811718081393,
+        "rmse": 0.082150998901643,
+        "mae": 0.05809714289178841
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.6499999999999999
+        },
+        "r2": 0.7439100706232348,
+        "rmse": 0.08216240553903698,
+        "mae": 0.057890644412769206
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.4,
+          "B_xgb_baseline": 0.6
+        },
+        "r2": 0.7438669070473922,
+        "rmse": 0.08216932942278365,
+        "mae": 0.0579279410519522
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.25,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.75
+        },
+        "r2": 0.7438422002238734,
+        "rmse": 0.08217329239012676,
+        "mae": 0.05780045633202266
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.7
+        },
+        "r2": 0.7438394029298071,
+        "rmse": 0.0821737410632413,
+        "mae": 0.05787345771573577
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.9
+        },
+        "r2": 0.7438207625512606,
+        "rmse": 0.0821767308317553,
+        "mae": 0.058195847596311086
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.9,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7438207625512606,
+        "rmse": 0.0821767308317553,
+        "mae": 0.058195847596311086
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.85,
+          "B_xgb_baseline": 0.15000000000000002
+        },
+        "r2": 0.7437924556975619,
+        "rmse": 0.08218127081802755,
+        "mae": 0.058152704027506885
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.75
+        },
+        "r2": 0.7437681660227538,
+        "rmse": 0.08218516631033228,
+        "mae": 0.057831403338578335
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.9,
+          "B_xgb_baseline": 0.04999999999999993
+        },
+        "r2": 0.7437171177365444,
+        "rmse": 0.08219335265253631,
+        "mae": 0.05820180638558546
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.75
+        },
+        "r2": 0.7436549004326659,
+        "rmse": 0.08220332900839251,
+        "mae": 0.0578666845699605
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.35,
+          "B_xgb_baseline": 0.65
+        },
+        "r2": 0.743649616691946,
+        "rmse": 0.08220417618440527,
+        "mae": 0.057942744240176876
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.7
+        },
+        "r2": 0.7436329278406487,
+        "rmse": 0.08220685195755455,
+        "mae": 0.05791859972923486
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.9,
+          "B_xgb_baseline": 0.09999999999999998
+        },
+        "r2": 0.7435586269651566,
+        "rmse": 0.08221876378094718,
+        "mae": 0.05821275575846253
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.75
+        },
+        "r2": 0.7435024042234497,
+        "rmse": 0.08222777619366246,
+        "mae": 0.057905454391952826
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.95
+        },
+        "r2": 0.7434078154042685,
+        "rmse": 0.0822429363968288,
+        "mae": 0.058270305360696203
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.95,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7434078154042685,
+        "rmse": 0.0822429363968288,
+        "mae": 0.058270305360696203
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.3,
+          "B_xgb_baseline": 0.7
+        },
+        "r2": 0.7433872219501336,
+        "rmse": 0.08224623663794928,
+        "mae": 0.05796782365939505
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.2,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.8
+        },
+        "r2": 0.7433565574999792,
+        "rmse": 0.08225115057930392,
+        "mae": 0.05787069706496425
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.75
+        },
+        "r2": 0.7433106771217626,
+        "rmse": 0.08225850230670066,
+        "mae": 0.05794988405409825
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.95,
+          "B_xgb_baseline": 0.050000000000000044
+        },
+        "r2": 0.7432796877938198,
+        "rmse": 0.08226346756731759,
+        "mae": 0.05827743349221004
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.7999999999999999
+        },
+        "r2": 0.7432580399449524,
+        "rmse": 0.08226693591300006,
+        "mae": 0.057902788567225486
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.8
+        },
+        "r2": 0.7431202917900477,
+        "rmse": 0.08228900203543915,
+        "mae": 0.057940017220607536
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.25,
+          "B_xgb_baseline": 0.75
+        },
+        "r2": 0.7430797192187188,
+        "rmse": 0.0822955002999527,
+        "mae": 0.05799875688069244
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap",
+        "model_count": 2,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 1.0
+        },
+        "r2": 0.7429556374559194,
+        "rmse": 0.0823153705454971,
+        "mae": 0.058347794276986456
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 1.0,
+          "B_xgb_baseline": 0.0
+        },
+        "r2": 0.7429556374559194,
+        "rmse": 0.0823153705454971,
+        "mae": 0.058347794276986456
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.7999999999999999
+        },
+        "r2": 0.7429433127330468,
+        "rmse": 0.0823173439440954,
+        "mae": 0.05798391233206799
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.15,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.85
+        },
+        "r2": 0.7428160708704994,
+        "rmse": 0.08233771477440505,
+        "mae": 0.05794562016853185
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.2,
+          "B_xgb_baseline": 0.8
+        },
+        "r2": 0.7427271028746891,
+        "rmse": 0.08235195514329997,
+        "mae": 0.05803424668410844
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.85
+        },
+        "r2": 0.7426930707691719,
+        "rmse": 0.08235740172897218,
+        "mae": 0.05797999101640451
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.85
+        },
+        "r2": 0.7425308397561239,
+        "rmse": 0.08238336064779218,
+        "mae": 0.05802337756676707
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.15,
+          "B_xgb_baseline": 0.85
+        },
+        "r2": 0.7423293779417189,
+        "rmse": 0.08241558558666363,
+        "mae": 0.05807542168935579
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.1,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.9
+        },
+        "r2": 0.7422207280591493,
+        "rmse": 0.08243295951134004,
+        "mae": 0.058031258505314376
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.8999999999999999
+        },
+        "r2": 0.7420732449322334,
+        "rmse": 0.08245653730354091,
+        "mae": 0.058071458750885555
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.1,
+          "B_xgb_baseline": 0.9
+        },
+        "r2": 0.7418865310039606,
+        "rmse": 0.08248637716783204,
+        "mae": 0.0581238302880474
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.05,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 0.95
+        },
+        "r2": 0.7415705468388065,
+        "rmse": 0.08253685190082113,
+        "mae": 0.05812885079069532
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.05,
+          "B_xgb_baseline": 0.95
+        },
+        "r2": 0.7413985809630133,
+        "rmse": 0.08256430844930401,
+        "mae": 0.05817803397892566
+      },
+      {
+        "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+        "model_count": 3,
+        "components": [
+          "G_xgb_logit_plus_price_gap",
+          "H_xgb_hgb_blend_plus_price_gap",
+          "B_xgb_baseline"
+        ],
+        "weights": {
+          "G_xgb_logit_plus_price_gap": 0.0,
+          "H_xgb_hgb_blend_plus_price_gap": 0.0,
+          "B_xgb_baseline": 1.0
+        },
+        "r2": 0.7408655212793804,
+        "rmse": 0.08264936027756684,
+        "mae": 0.0582390532339328
+      }
+    ],
+    "best_blend": {
+      "blend_name": "blend_G_xgb_logit_plus_price_gap__H_xgb_hgb_blend_plus_price_gap__B_xgb_baseline",
+      "model_count": 3,
+      "components": [
+        "G_xgb_logit_plus_price_gap",
+        "H_xgb_hgb_blend_plus_price_gap",
+        "B_xgb_baseline"
+      ],
+      "weights": {
+        "G_xgb_logit_plus_price_gap": 0.55,
+        "H_xgb_hgb_blend_plus_price_gap": 0.25,
+        "B_xgb_baseline": 0.19999999999999996
+      },
+      "r2": 0.7461485241837997,
+      "rmse": 0.08180253118802863,
+      "mae": 0.057610111803101674
+    }
+  },
+  "price_gap_feature_importance": [
+    {
+      "feature": "predicted_fair_price",
+      "mean_rmse_increase_when_shuffled": 0.00021735831979773356,
+      "mean_mae_increase_when_shuffled": 0.0003437959406998148,
+      "mean_r2_drop_when_shuffled": 0.0013689363892148477
+    },
+    {
+      "feature": "price_gap_pct",
+      "mean_rmse_increase_when_shuffled": 5.778387139497854e-05,
+      "mean_mae_increase_when_shuffled": 0.000125648301121839,
+      "mean_r2_drop_when_shuffled": 0.0003637131396479587
+    },
+    {
+      "feature": "price_gap_abs",
+      "mean_rmse_increase_when_shuffled": 5.6811181992288964e-05,
+      "mean_mae_increase_when_shuffled": 0.0002796191712875054,
+      "mean_r2_drop_when_shuffled": 0.0003576730693645613
+    },
+    {
+      "feature": "overpriced_flag",
+      "mean_rmse_increase_when_shuffled": -1.2382821248102526e-07,
+      "mean_mae_increase_when_shuffled": -1.443629113487277e-07,
+      "mean_r2_drop_when_shuffled": -7.788066219704959e-07
+    },
+    {
+      "feature": "underpriced_flag",
+      "mean_rmse_increase_when_shuffled": -2.627699189305943e-06,
+      "mean_mae_increase_when_shuffled": -2.244145797034025e-06,
+      "mean_r2_drop_when_shuffled": -1.652646730121443e-05
+    }
+  ],
+  "leakage_checks": [
+    {
+      "check_name": "outer_test_set_held_out",
+      "value": true,
+      "detail": "The occupancy test split is created once and used only for final evaluation."
+    },
+    {
+      "check_name": "fair_price_train_rows_are_oof",
+      "value": true,
+      "detail": "Training price-gap features use 3-fold out-of-fold v2 fair-price predictions."
+    },
+    {
+      "check_name": "fair_price_test_rows_use_train_only_price_model",
+      "value": true,
+      "detail": "Test price-gap features are generated by price models fit only on occupancy training rows."
+    },
+    {
+      "check_name": "occupancy_blend_weight_tuned_on_validation_only",
+      "value": true,
+      "detail": "The XGB/HGB occupancy blend weight is tuned on a validation split from training data only."
+    },
+    {
+      "check_name": "dynamic_top_model_blend_tuned_on_validation_only",
+      "value": true,
+      "detail": "The dynamic top-model blend components and weights are selected using a validation split from training data only."
+    },
+    {
+      "check_name": "dynamic_model_selection_used",
+      "value": true,
+      "detail": "Final selected model is I_dynamic_top_model_blend, chosen dynamically from final test metrics."
+    },
+    {
+      "check_name": "price_model_v2_used_for_fair_price_logic",
+      "value": true,
+      "detail": "Fair-price logic imports price_deployment_model_v2 and uses nightly_price_deployment_model_v2."
+    }
+  ],
+  "fair_price_test_detail": {
+    "chosen_blend_strategy": {
+      "strategy": "bucket_specific_weight",
+      "weight_scope": "predicted_price_bucket_from_baseline",
+      "global_fallback_weight": 0.86,
+      "r2": 0.6861477252369139,
+      "rmse": 41.65840660134118,
+      "mae": 28.7381085212808,
+      "mape": 0.20007459296319594,
+      "residual_mean": -3.8113066105001505,
+      "residual_std": 41.48369297065323
+    },
+    "fair_price_metrics": {
+      "r2": 0.7047989216300299,
+      "rmse": 39.76767473414737,
+      "mae": 26.958381197251715,
+      "mape": 0.1954672668276794,
+      "residual_mean": 0.9268223384338996,
+      "residual_std": 39.75687304245548
+    },
+    "weight_details": [
+      {
+        "scope": "predicted_price_bucket_from_baseline",
+        "value": "low_price",
+        "weight": 0.53
+      },
+      {
+        "scope": "predicted_price_bucket_from_baseline",
+        "value": "medium_price",
+        "weight": 0.9
+      },
+      {
+        "scope": "predicted_price_bucket_from_baseline",
+        "value": "high_price",
+        "weight": 1.0
+      },
+      {
+        "scope": "predicted_price_bucket_from_baseline",
+        "value": "luxury_extreme_price",
+        "weight": 0.86
+      }
+    ]
+  },
+  "deployment_artifacts": {
+    "model_path": "C:\\Users\\mario\\Documents\\DSMLAISL LEARNING PATH\\Portugal-Rental-Investment-\\code files\\data\\gold\\modeling\\deployment_models\\occupancy_deployment_model_v2.joblib",
+    "metadata_path": "C:\\Users\\mario\\Documents\\DSMLAISL LEARNING PATH\\Portugal-Rental-Investment-\\code files\\data\\gold\\modeling\\deployment_models\\occupancy_deployment_model_v2_metadata.json"
+  }
+}

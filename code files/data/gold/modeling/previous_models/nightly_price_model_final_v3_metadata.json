@@ -1,0 +1,19 @@
+{
+  "notebook": "nightly_price_modeling_v3.ipynb",
+  "chosen_winner_by_r2": {
+    "target_mode": "log_price",
+    "feature_set": "observed_market_full",
+    "model_name": "hist_gradient_boosting",
+    "mae": 27.127756678672096,
+    "rmse": 40.082326204216066,
+    "r2": 0.6926914427126932
+  },
+  "best_mae_row": {
+    "target_mode": "log_price",
+    "feature_set": "launch_plus_market_quality",
+    "model_name": "xgboost",
+    "mae": 26.944657820930843,
+    "rmse": 40.15360120363176,
+    "r2": 0.6915975495277766
+  }
+}

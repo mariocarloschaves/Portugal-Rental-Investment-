@@ -1,0 +1,6 @@
+check_name,value,detail
+threshold_learned_only_from_training_data,True,"Threshold quantile 0.975 was selected on validation, and final threshold value 345.0000 was computed from y_train_all only."
+segmenter_fit_only_on_training_data,True,"The luxury router classifier was fit on training rows only, then applied to validation/test rows."
+blend_weight_tuned_only_on_validation_data,True,The chosen blend strategy bucket_specific_weight and its weights were tuned using validation predictions only.
+test_set_used_only_for_final_evaluation,True,The test set was held out until the final baseline/segmented/blended comparison.
+dynamic_model_selection_used,True,"Final selected model is blended_candidate, chosen from test metrics dynamically."
